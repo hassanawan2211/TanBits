@@ -6,6 +6,8 @@ let b = 20;
 
 console.log( a == b );
 
+
+
 // this type of operator check only value
 let A = 20;
 
