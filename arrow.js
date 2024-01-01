@@ -107,18 +107,112 @@
 
 // we can also concat two or more obj 
 
-let obj1 = {
-    Name : "Ali Hassan",
+// let obj1 = {
+//     Name : "Ali Hassan",
+//     company : "tanbits"
+// }
+
+// let obj2 = {
+//     age : 20,
+//     city : "lahore"
+// }
+
+// let obj3 = {...obj1,...obj2};
+
+// console.log(obj3);
+
+
+// Destructuring Array 
+
+// let user = ["tanbits", "lahore" , "web & app " , ["male", 35000]];
+
+// let [company, city = "isb", service , [gender, salary]] = user;
+
+// console.log(company );
+// console.log( city );
+// console.log( service);
+// console.log(  gender);
+// console.log( salary);
+
+
+// we can also overwrite destructure arr 
+
+// let name_companies = ["tkxel", "tanbits" , "10pearls", "devsinc" ["male", 35000]];
+
+// let [Tkxel, Tsnbits, Pearls, Devsinc, [gender, salary]] = name_companies;
+
+
+// console.log(salary);
+
+// destructureing of an object 
+
+// let obj1 = {
+
+// }
+
+// let user = ["tanbits", "lahore" , "web & app "  ];
+
+// let [company,  ...argu ] = user;
+
+// console.log(company );
+// console.log(argu );
+
+
+// by using function 
+
+// function user ([Name , age , company]){
+// console.log(Name);
+// console.log(age);
+// console.log( company);
+// }
+
+// user(["Ali", 23, "Tanbits"]);
+
+// another method by using function 
+
+// function user ( ){
+//     return ["Ali", 23, "Tanbits"];
+ 
+//     }
+    
+//  let [name , age , company]   = user( );
+
+//  console.log(age);
+//  console.log(company);
+//  console.log(name);
+
+
+// Destruturing object 
+
+// let user = {
+//     user_name : "Ali Hassan",
+//     age : 25,
+//     company : "tanbits"
+// };
+
+// let {user_name ,age, company} = user;
+
+// console.log(user_name);
+// console.log(age);
+// console.log(company);
+
+
+// also do by this method 
+
+let user = {
+    user_name : "Ali Hassan",
+    age : 25,
     company : "tanbits"
-}
+};
 
-let obj2 = {
-    age : 20,
-    city : "lahore"
-}
+let {user_name : n ,age: a, company: c} = user;
 
-let obj3 = {...obj1,...obj2};
+console.log(n);
+console.log();
+console.log(c);
+     
+ 
 
-console.log(obj3);
+
 
      
