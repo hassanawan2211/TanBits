@@ -450,21 +450,101 @@
 
 // Deep copy 
 
-let obj1 = {
-    Name : "Ali",
-    age : 23,
-    company : "Tanbits",
-    services : {
-        web : "react",
-        backend : "node"
-    },
-};
-console.log(obj1);
-let obj2 =JSON.parse( JSON.stringify(obj1));
+// when we have an object and also nested obj in this object and we assign this obj1 into another variable obj2 then we want change value of the nested obj only obj2 and want not change in main obj then we use deep copy concept
 
-obj2.services.web = "vue js ";
+// In this deep copy we convert obj1 to string then convert into object 
 
-console.log(obj2);
+// json.stringify used for convert object into string 
+
+// json.parse used for convert back to obj from string 
+
+// let obj1 = {
+//     Name : "Ali",
+//     age : 23,
+//     company : "Tanbits",
+//     services : {
+//         web : "react",
+//         backend : "node"
+//     },
+// };
+// console.log(obj1);
+// let obj2 =JSON.parse( JSON.stringify(obj1));
+
+// obj2.services.web = "vue js ";
+
+// console.log(obj2);
+
+
+// Date  method
+// we can also find previous years date day etc by using these method 
+
+// new Date() use for show current day date 
+ // This show date according to system or server
+
+
+
+let now = new Date();
+
+// todaatestring used for SHOW on date in string like mon feb 11 2019
+
+// console.log(now.toDateString());
+
+//get only current simple date 
+
+console.log(now.getDate());
+
+// for get only full year 
+
+console.log(now.getFullYear());
+
+// for only get month 
+
+// start 0 from first month 
+
+
+console.log(now.getMonth());
+
+// for get current day 
+// this senario sunday is start from 0
+
+console.log(now.getDay());
+
+//  timing 
+
+// for geting houser
+
+console.log(now.getHours());
+
+// for minutes
+
+console.log(now.getMinutes());
+
+// for seconds 
+
+console.log(now.getSeconds());
+
+// for milliseconds
+
+console.log(now.getMilliseconds());
+
+//date method for set 
+
+// for checking furture what day and time on given date 
+
+now.setDate(3);
+
+console.log(now)
+
+// for year 
+
+now.setFullYear(2025);
+
+console.log(now)
+
+
+
+
+
 
 
 
