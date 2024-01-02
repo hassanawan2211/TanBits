@@ -483,64 +483,90 @@
 
 
 
-let now = new Date();
+// let now = new Date();
 
-// todaatestring used for SHOW on date in string like mon feb 11 2019
+// // todaatestring used for SHOW on date in string like mon feb 11 2019
 
-// console.log(now.toDateString());
+// // console.log(now.toDateString());
 
-//get only current simple date 
+// //get only current simple date 
 
-console.log(now.getDate());
+// console.log(now.getDate());
 
-// for get only full year 
+// // for get only full year 
 
-console.log(now.getFullYear());
+// console.log(now.getFullYear());
 
-// for only get month 
+// // for only get month 
 
-// start 0 from first month 
+// // start 0 from first month 
 
 
-console.log(now.getMonth());
+// console.log(now.getMonth());
 
-// for get current day 
-// this senario sunday is start from 0
+// // for get current day 
+// // this senario sunday is start from 0
 
-console.log(now.getDay());
+// console.log(now.getDay());
 
-//  timing 
+// //  timing 
 
-// for geting houser
+// // for geting houser
 
-console.log(now.getHours());
+// console.log(now.getHours());
 
-// for minutes
+// // for minutes
 
-console.log(now.getMinutes());
+// console.log(now.getMinutes());
 
-// for seconds 
+// // for seconds 
 
-console.log(now.getSeconds());
+// console.log(now.getSeconds());
 
-// for milliseconds
+// // for milliseconds
 
-console.log(now.getMilliseconds());
+// console.log(now.getMilliseconds());
 
-//date method for set 
+// //date method for set 
 
-// for checking furture what day and time on given date 
+// // for checking furture what day and time on given date 
 
-now.setDate(3);
+// now.setDate(3);
 
-console.log(now)
+// console.log(now)
 
-// for year 
+// // for year 
 
-now.setFullYear(2025);
+// now.setFullYear(2025);
 
-console.log(now)
+// console.log(now)
 
+// also set for months and for timming hourse , second , minutes and millisecond 
+
+
+
+//  method for declare object 
+
+let person = new Object();
+person.Name = "Ali";
+person.age = 23;
+person.city = "Lahore";
+person.job_title = "MERN_Intern";
+person.company = "Tanbits";
+
+console.log(person.age);
+
+// another method 
+
+let person2 = {
+Name : "Ali",
+age:  23,
+city:  "Lahore",
+job_title : "MERN_Intern",
+company : "Tanbits",
+}
+
+console.log(person2.city);
 
 
 
