@@ -421,13 +421,54 @@
 // reduce method convert all element of an array in single varaible like total sum of the array 
 // reduce method have two parameter first 0ne is previous value and in second parameter have current value 
 
-let arr = [2,3,4,5,6,7,8];
+// let arr = [2,3,4,5,6,7,8];
 
-let new_arr = arr.reduce((prev,curr) =>{
-    return prev + curr;
-});
+// let new_arr = arr.reduce((prev,curr) =>{
+//     return prev + curr;
+// });
 
-console.log(new_arr);
+// console.log(new_arr);
+
+//   Shallow Copy
+
+// A shallow copy is a copy that only goes one level deep. In other words, it copies the object and all its properties, but any nested objects or arrays will still reference the same memory location as the original object. It means that if you make changes to the nested object, it will also affect the original object, as well as the copied object
+
+// let user = {
+//     Name: "Ali",
+//     age : 23,
+//     company : "Tanbits"
+// }
+// console.log(user);
+// // by using ...  destructure of an object then only change in new object no any change in previous object 
+// let user1 = {...user};
+
+// user1.age = 35;
+
+// console.log(user1);
+// console.log(user);
+
+
+// Deep copy 
+
+let obj1 = {
+    Name : "Ali",
+    age : 23,
+    company : "Tanbits",
+    services : {
+        web : "react",
+        backend : "node"
+    },
+};
+console.log(obj1);
+let obj2 =JSON.parse( JSON.stringify(obj1));
+
+obj2.services.web = "vue js ";
+
+console.log(obj2);
+
+
+
+
 
  
      
