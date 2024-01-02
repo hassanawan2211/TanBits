@@ -97,12 +97,12 @@
 
 
 
-// let array1 = [1,2,3,4,5];
+let array1 = [1,2,3,4,5];
 
-// let array2 = [...array1];
-// array1.push(6);
-// console.log(array2);
-// console.log(array1);
+let array2 = [...array1];
+array1.push(6);
+console.log(array2);
+console.log(array1);
 
 
 // we can also concat two or more obj 
@@ -199,17 +199,67 @@
 
 // also do by this method 
 
-let user = {
-    user_name : "Ali Hassan",
-    age : 25,
-    company : "tanbits"
-};
+// let user = {
+//     user_name : "Ali Hassan",
+//     age : 25,
+//     company : "tanbits"
+// };
 
-let {user_name : n ,age: a, company: c} = user;
+// let {user_name : n ,age: a, company: c} = user;
 
-console.log(n);
-console.log();
-console.log(c);
+// console.log(n);
+// console.log();
+// console.log(c);
+
+
+// map method 
+
+// let ary = [1,2,3,4,5];
+
+// let b = ary.map((newAry) => newAry * 5 );
+// console.log(b);
+
+// let array = [1,2,3,4,5];
+
+// let new_array = array.map((value) => {
+//     return value;
+// })
+
+
+// filter method
+
+// let array = [1,2,3,4,-5,7,6,-5,-6,-7,-8];
+
+// let b = array.filter(positive_number => positive_number > 0);
+
+// console.log(b);
+
+
+// for each 
+
+// let array = ["Ali", "Hassan", 3, "tanbits"];
+
+//  array.forEach(function(value){
+    //   console.log(new_array);
+      
+// });
+
+
+// let arr = ["tanbits", 5 , "ali "];
+
+// let arr1  = [ 2,3,"dhijfhs"];
+
+//  var b = arr.concat(arr1);
+
+//  var c = b.join("/");
+
+//  console.log(b);
+//  console.log(c);
+
+
+
+
+ 
      
  
 

@@ -151,13 +151,13 @@
 // // when we search of an that value not in array then indexof function is return -1 index 
 
 
-// let a = ["Ali", "Ahmad", "hassan", "Ali"]
+let a = ["Ali", "Ahmad", "hassan", "j"]
 
-// console.log(a);
+console.log(a);
 
-// let c = a.indexOf("Ali",2);
+let c = a.indexOf("Ali",2);
 
-// console.log(c);
+console.log(c);
 
 // // last indexof start searching from end side of an array also give and also give index in parameter for where we want to start 
 
