@@ -390,12 +390,44 @@
 
 // for loop 
 
-let   n = 5;
+// let   n = 5;
 
-for  (let a = 3; a <= n; a++){
-    console.log(a);
-}
+// for  (let a = 3; a <= n; a++){
+//     console.log(a);
+// }
 
+
+// map method
+
+// let arr = [1,2,3,4,5,6,7,8,9,10];
+
+// let new_arr = arr.map((item)=>{
+//   return item * 2;
+// })
+// console.log(new_arr);
+
+
+// filter method
+
+// let arr = [1,2,3,4,5,6,7,8,9,10];
+
+// let new_arr = arr.filter((item)=>{
+//   return item % 2 === 0;
+// })
+// console.log(new_arr);
+
+
+// reduce method 
+// reduce method convert all element of an array in single varaible like total sum of the array 
+// reduce method have two parameter first 0ne is previous value and in second parameter have current value 
+
+let arr = [2,3,4,5,6,7,8];
+
+let new_arr = arr.reduce((prev,curr) =>{
+    return prev + curr;
+});
+
+console.log(new_arr);
 
  
      
