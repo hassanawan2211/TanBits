@@ -97,12 +97,12 @@
 
 
 
-let array1 = [1,2,3,4,5];
+// let array1 = [1,2,3,4,5];
 
-let array2 = [...array1];
-array1.push(6);
-console.log(array2);
-console.log(array1);
+// let array2 = [...array1];
+// array1.push(6);
+// console.log(array2);
+// console.log(array1);
 
 
 // we can also concat two or more obj 
@@ -256,7 +256,145 @@ console.log(array1);
 //  console.log(b);
 //  console.log(c);
 
+//  while loop 
 
+// in while loop first we define condtion then statement and then increment or decrement
+
+// program to display numbers from 1 to 5
+// initialize the variable
+// let i = 1, n = 5;
+
+// // while loop from i = 1 to 5
+// while (i <= n) {
+//     console.log(i);
+//     i += 1;
+// };
+
+
+// do / while loop
+
+// first in do statement is execute then check condition if condtion is true then statement is execute if condition is false then loop terminates
+
+// program to display numbers
+// let i = 1;
+// const n = 5;
+
+// // do...while loop from 1 to 5
+// do {
+//      console.log(i);
+//      i++;
+// } while(i <= n);
+
+
+// another example 
+
+// to find the sum of positive numbers
+// if the user enters negative number, the loop terminates
+// negative number is not added to sum
+
+// let sum = 0;
+// let number = 0;
+
+// do {
+//     sum += number;
+//     number = parseInt(prompt('Enter a number: '));
+// } while(number >= 0)
+
+// console.log(`The sum is ${sum}.`);
+ 
+
+// switch case 
+
+
+// let day = 4;
+
+// switch(day){
+// case 0:
+// console.log("Today is monday")
+// break;
+// case 1:
+//     console.log("Today is tuesday")
+// break;
+// case 2:
+//     console.log("Today is wednesday")
+// break;
+// case 3:
+//     console.log("Today is thurday")
+// break;
+// case 4:
+//     console.log("Today is friday")
+// break;
+// case 5:
+//     console.log("Today is saturday")
+// break;
+// case 6:
+//     console.log("Today is sunday")
+// break;
+
+// default:
+//     console.log("Enter valid day")
+// };
+
+
+
+// another example 
+
+// let day = 3;
+
+// switch(day){
+// case 0: case 1: case 2:  case 3: 
+// console.log("Today is monday")
+// break;
+// // case 1:
+// //     console.log("Today is tuesday")
+// // break;
+// // case 2:
+// //     console.log("Today is wednesday")
+// // break;
+// // case 3:
+// //     console.log("Today is thurday")
+// // break;
+// case 4:
+//     console.log("Today is friday")
+// break;
+// case 5:
+//     console.log("Today is saturday")
+// break;
+// case 6:
+//     console.log("Today is sunday")
+// break;
+
+// default:
+//     console.log("Enter valid day")
+// };
+
+
+// another example 
+
+// let age = 30;
+
+// switch(true){
+// case(age >= 18 && age <= 20):
+//     console.log("You are eligibal");
+//     break;
+// case (age >= 21 && age <= 30):
+// console.log("you are not eligibal");
+// break;
+
+// default:
+//     console.log("Enter valid age ");
+//     break;
+     
+// };
+
+
+// for loop 
+
+let   n = 5;
+
+for  (let a = 3; a <= n; a++){
+    console.log(a);
+}
 
 
  
