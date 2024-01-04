@@ -770,22 +770,152 @@
 // console.log(new_str.join(" "));
 
   
-  
+  // reverse only words from given string 
 
-let str = "Tanbits is Software Company";
+// let str = "Tanbits is Software Company";
 
-let new_str = str.split(" ").map((words) =>{
+// let new_str = str.split(" ").map((words) =>{
 
-    reverse_words = "";
+//     reverse_words = "";
 
-    for(let i = words.length -1; i >= 0; i--){
-        reverse_words += words[i]
-    }
+//     for(let i = words.length -1; i >= 0; i--){ 
+//         reverse_words += words[i]
+//     }
 
-return reverse_words;
-})
+// return reverse_words;
+// })
 
-console.log(new_str.join(" "));
+// console.log(new_str.join(" "));
+
+// // find largest word from given string 
+
+// let str = "tanbits is a software company";
+
+// let words = str.split(" ");
+
+// let longestWord = "";
+
+// for(let word of words ){
+//     if(word.length > longestWord.length)
+//     longestWord = word
+    
+// }
+// console.log(longestWord);
+
+// push an element into the exsisting array 
+
+// let array = [1,2,3];
+
+// let newElement = 5 ;
+// let new_string = "hassan" ;
+// const multipleElements = [4,5,6] 
+
+// let new_arry = [];
+
+// for(let i = 0; i < array.length; i++){
+//     new_arry[i] = array[i];
+   
+// }
+
+// // new_arry[array.length] = newElement;
+// // new_array length 3
+// // array length 3
+
+// new_arry[array.length] = newElement;
+
+// console.log(array);
+
+// console.log(new_arry);
+
+// delete an element from exsisting array 
+
+//  let arr = [1,2,3];
+
+//  let new_arr = [];
+
+//  for(let i = 0; i < arr.length -1; i++){
+//     new_arr[i] = arr[i];
+//  }
+
+//  console.log(arr);
+//  console.log(new_arr)
+
+
+// let arr = [2,3,4,5];
+
+// let new_element = 1;
+ 
+
+// arr[arr.length] = new_element
+
+// console.log(arr);
+
+
+// add multiple element in an array 
+
+// let arr = [1,2,3];
+
+// let add_element = [5,6,7,9];
+
+// let new_arr = [];
+
+// let newIndex = 0;
+
+// for(let i =0; i < arr.length + add_element.length;   i++){
+
+// if(i < arr.length){
+//     // arr[i] = add_element[i]
+//     new_arr[i] = arr[i];
+// } else{
+//     new_arr[i] = add_element[newIndex];
+//     newIndex++;
+// }
+
+// } 
+   
+// console.log(new_arr);
+
+// add new element at the first index of the array 
+
+// let arr = [1,2,3,4,5,6];
+
+// let new_element = 8;
+
+//  let new_arr = [new_element];
+
+//  for(let i = 0; i < arr.length ; i++){
+//     new_arr[i + 1] = arr[i]
+//  }
+
+//  console.log(new_arr);
+
+// remove an element from first index of an array
+
+// let arr = [7,2,3,4,5];
+
+// for(let i = 0; i < arr.length -1; i++){
+// arr[i] = arr [i + 1];
+// }
+// arr.length = arr.length -1;
+// console.log(arr);
+
+// find repeated elements of array 
+
+let arr = [2,3,4,2,5,6,3,2,5,7,8,7]; 
+
+let new_arr = [];
+
+// for of 
+
+let str = "hassan";
+
+for(let name in str){
+    console.log(name);
+}
+
+
+
+
 
 
 
