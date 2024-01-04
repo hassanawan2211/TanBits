@@ -547,27 +547,245 @@
 
 //  method for declare object 
 
-let person = new Object();
-person.Name = "Ali";
-person.age = 23;
-person.city = "Lahore";
-person.job_title = "MERN_Intern";
-person.company = "Tanbits";
+// let person = new Object();
+// person.Name = "Ali";
+// person.age = 23;
+// person.city = "Lahore";
+// person.job_title = "MERN_Intern";
+// person.company = "Tanbits";
 
-console.log(person.age);
+// console.log(person.age);
 
-// another method 
+// // another method 
 
-let person2 = {
-Name : "Ali",
-age:  23,
-city:  "Lahore",
-job_title : "MERN_Intern",
-company : "Tanbits",
-}
+// let person2 = {
+// Name : "Ali",
+// age:  23,
+// city:  "Lahore",
+// job_title : "MERN_Intern",
+// company : "Tanbits",
+// }
 
-console.log(person2.city);
+// console.log(person2.city);
 
+// fundaments of javascript 
+
+// reverse of an array 
+
+// let arr = [1,2,3,4,5,5,6];
+
+// let start = 0;
+// let end = arr.length-1;
+
+// while(start < end){
+//    let temp = arr[start];
+//    arr[start] = arr[end];
+//    arr[end] = temp
+
+//   start++;
+//   end--;
+    
+// }
+// console.log(arr);
+// find max num from an array 
+
+// let array = [5,6,3,4,56];
+
+// let max = array[0];
+
+// for (let i = 0; i<array.length; i++){
+//     if( array[i] > max){
+//         max = array[i]
+         
+//     }
+    
+// }
+
+// console.log(max);
+
+// find minimum num of an array 
+
+// let number = [3,4,5,6,1,7,8,9];
+
+// let min = number[0];
+
+// for(let i = 0; i<number.length; i++){ 
+//     if(number[i] < min){
+//         min = number[i]
+//     }
+// }
+// console.log(min);
+
+// check palindrom
+
+// let str = "mam"
+
+// let  left = 0;
+// let  right = str.length-1;
+// let check = true;
+// while(left < right) {
+//     if(str[left] !== str[right]){
+//         check = false;
+//         console.log(false);
+
+//         break;
+//     }
+//     left++;
+//     right--;
+//     break;
+
+// }
+
+// if(check === true){
+//     console.log(check);
+// }
+
+//  sorting of an array 
+
+// let arr = [1,4,7,9,3,4,2,5,6];
+
+// for(let i = 0; i < arr.length; i++){
+//     for(let j=0; j < arr.length -1 -i;j++ ){
+//         if(arr[j] > arr[j+1]){
+//             let temp = arr[j];
+//             arr[j] = arr[j + 1];
+//             arr[j+1] = temp;
+//         }
+//     }
+// }
+
+//  console.log(arr);
+
+// for dublication numbers 
+
+// let arr = [2,3,6,2,3,8,9,7,6,5,6,2];
+
+// let dubicate_num = arr.filter((num,index,array) => array.indexOf(num) !== index)
+// console.log( dubicate_num);
+
+// sum of an array and average 
+
+// let arr = [2,2,5,1];
+
+// let sum = 0;
+
+// for(let i = 0; i < arr.length; i++){
+//     sum += arr[i];
+// }
+// console.log(sum);
+// console.log(sum/arr.length);
+
+//  reduce method 
+
+// let arr = [5,5,5,5];
+// let new_arr = arr.reduce((prev,curr) => prev + curr);
+
+// console.log(new_arr);
+// console.log(new_arr/arr.length);
+
+//
+
+// let array = [2,4,5,7,8,7];
+// let arr = new Array;
+// for(let i = 0; i < array.length; i++){
+//     switch(true){
+// case (array [i]%2 == 0 ):
+//     console.log("This is Even Nunber" + )
+//     break;
+//     case (array[i] % 2 !== 0):
+//         console.log("This is odd num" + array[i])
+//         break
+//         default:
+//             console.log("this is equal")
+
+//     }
+// }
+
+// let array = [2, 4, 5, 7, 8, 7];
+// let EvenArr = [];
+// let OddArr=[];
+// for (let i = 0; i < array.length; i++) {
+//     switch (true) {
+//         case array[i] % 2 === 0:
+//             EvenArr.push(array[i]); // Add even numbers to the new array
+//             break;
+//         case array[i] % 2 !== 0:
+//             OddArr.push(array[i]);// Add Odd numbers to the new array
+//             break;
+//         default:
+//             console.log("this is equal");
+//     }
+// }
+// console.log("New Array with Even Numbers: " + EvenArr);
+// console.log("New Array with Even Numbers: " + OddArr);
+
+
+// split method 
+// split method return an array 
+// split method take all element of the string 
+
+// let str = "alihassan hassan";
+// let new_str = str.split(" ");
+// console.log(new_str);
+
+
+ // reverse of an string 
+
+//  let str = "tanbits is software company";
+ 
+//  let new_str = str.split(" ").map((words) =>{
+//      for(let i = str ; i >=0; i--){
+//         words += str[i]
+//      }
+//     // return words.split(" ")
+
+//     console.log(words);
+     
+//  })
+// console.log(str.)
+
+
+// let str = "tanbits is software company";
+ 
+//  let new_str = str.split(" ").map((words) =>{
+//      for(let i = str ; i >=0; i--){
+//         words += str[i]
+//      }
+//     // return words.split(" ")
+
+//     console.log(words);
+     
+//  })
+// console.log(str.s)
+// console.log(new_str.join(" "));  
+
+// let str = "tanbits is software company";
+// let new_str = str.split(" ").map((word) => {
+//     let reversed_word = "";
+//     for(let i = word.length - 1; i >= 0; i--){
+//         reversed_word += word[i];
+//     }
+//     return reversed_word;
+// });
+// console.log(new_str.join(" "));
+
+  
+  
+
+let str = "Tanbits is Software Company";
+
+let new_str = str.split(" ").map((words) =>{
+
+    reverse_words = "";
+
+    for(let i = words.length -1; i >= 0; i--){
+        reverse_words += words[i]
+    }
+
+return reverse_words;
+})
+
+console.log(new_str.join(" "));
 
 
 
