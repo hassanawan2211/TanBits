@@ -1325,34 +1325,260 @@
 
 // example for rejection case 
 
-function prom(num1,num2){
-  return new Promise (function(resolve,reject){
+// function prom(num1,num2){
+//   return new Promise (function(resolve,reject){
 
-    console.log("fetching data, please wait")
-   var c = num1 / num2;
-    setTimeout(() =>{
-      if(num1,num2){
-        resolve(`your answer is : ${c}`)
-      } else{
-        reject(" calculation failed ")
-      }
-    },2000)
+//     console.log("fetching data, please wait")
+//    var c = num1 / num2;
+//     setTimeout(() =>{
+//       if(num1,num2){
+//         resolve(`your answer is : ${c}`)
+//       } else{
+//         reject(" calculation failed ")
+//       }
+//     },2000)
 
 
  
-  });
+//   });
 
-}
-
- 
-
-prom(10,0).then((Result) => {
-  console.log(Result);}).catch((error) => {
-    console.log(error);});
+// }
 
  
 
+// prom(10,0).then((Result) => {
+//   console.log(Result);}).catch((error) => {
+//     console.log(error);});
 
+
+
+// promise all method 
+
+// The Promise.all() method is actually a method of the Promise object (which is also an object under JavaScript used to handle all the asynchronous operations), that takes an array of promises(an iterable) as input. It returns a single Promise that resolves when all of the promises passed as an iterable, which have resolved, or when the iterable contains no promises. In a simple way, if any of the passed-in promises reject, the Promise.all() method asynchronously rejects the value of the promise that has already been rejected, whether or not the other promises have been resolved. 
+
+// Syntax: 
+
+// Promise.all( iterable )
+// Parameters: This method accepts a single parameter iterable which takes an array of promises or a normal array that contains some objects.
+
+// Return values: It follows some rules to return a single promise: 
+
+// If passed argument is empty, it returns a Promise that is already resolved.
+// If the passed iterable contains no promises, it returns a Promise that is resolved asynchronously.
+// For all other cases, it returns a pending Promise.
+// Fulfillment and Rejection of Promise.all() Method: 
+
+// Fulfillment: The returned promise is fulfilled, 
+
+// If the passed iterable is empty, then this method returns a promise synchronously which is already resolved.
+// If all of the passed promises are fulfilled, the returned Promises are fulfilled asynchronously.
+// Here the successful execution of this particular method totally depends on all promises to get successfully executed.
+// Rejection: If any of the passed promises are rejected, then this method rejects the value of that promise, whether or not the other promises have been resolved. In other words, if any promise fails to get executed, then Promise.all() method will return an error and it will not take into account whether other promises are successfully fulfilled or not.
+
+// In promise all method then() function call only when all promise resolve and when failed to resolve any one promise  then call catc() function. 
+
+// Example promise .all () method 
+
+// in this case all promise are resolve then called then() function run and execute 
+
+// let p1 = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     console.log("first promise is resolved ")
+//     resolve(10);
+//   } , 1* 1000)
+  
+// });
+// let p2 = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     console.log("second promise is resolved ")
+//     resolve(20);
+//   } , 2* 1000)
+  
+// });
+// let p3 = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     console.log("thired promise is resolved ")
+//     resolve(30);
+//   } , 3* 1000)
+  
+// });
+
+// let total = 0;
+// Promise.all([p1,p2,p3]).then((Result)=>{
+
+//   for(let i in Result){
+//     total += Result[i];
+//   }
+// console.log(`Result  is : ${Result}`)
+// console.log(`Sum of the total Result is : ${total}`)
+// }).catch((Error)=>{
+//   console.log(`Error : ${Error}`)
+// });
+
+
+// in any one recjection case excecute only catch function in promise.
+
+// Example 
+
+
+// let p1 = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     console.log("first promise is resolve ")
+//     resolve(10);
+//   },1 * 1000)
+// });
+
+
+// let p2 = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+// console.log("second promise  is reject  ")
+// reject("failed")
+//   },2 * 1000)
+// });
+
+// let p3 = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     console.log(" thired promise is resolve ")
+//     resolve(30);
+//   }, 3 * 1000)
+// })
+// let total = 0;
+// Promise.all([p1,p2,p3]).then((result)=>{
+
+//   for(let i in result){
+//     total += result[i];
+//   }
+// console.log(`Result is ${result}`)
+// console.log(`total num is : ${total}`)
+
+// }).catch((error)=>{
+// console.log(`Error is : ${error}`)
+// });
+
+
+// also do short this code 
+
+// let promiseCall = function (returnData,messege){
+//   return (resolve,reject)=>{
+//     setTimeout(()=>{
+//       console.log(`the ${messege} promise has resolved `)
+//       resolve(returnData);
+
+//     }, returnData * 100)
+//   }
+// }
+
+// let p1 = new Promise(promiseCall(10,"first"));
+// let p2 = new Promise(promiseCall(20,"second"));
+// let p3 = new Promise(promiseCall(30,"thired" ));
+
+// let total = 0;
+// Promise.all([p1,p2,p3]).then((result)=>{
+//   for(let i in result){
+//     total += result[i];
+//   }
+// console.log(`Result is : ${result}`)
+// console.log(`total result is : ${total}`)
+// }).catch((error)=>{
+//   console.log(`Error : ${error}`)
+// })
+
+
+// rejection case 
+
+
+// let promiseCall = function (returnData,messege){
+//   return (resolve,reject)=>{
+//     setTimeout(()=>{
+//       console.log(`the ${messege} promise has resolved `)
+//       resolve(returnData);
+
+//     }, returnData * 100)
+//   }
+// }
+
+// let p1 = new Promise(promiseCall(10,"first"));
+// let p2 = new Promise(promiseCall(20,"second"));
+// let p3 = new Promise(promiseCall(30,"thired" ));
+// let p4 = new Promise((resolve,reject) =>{
+//   console.log(`the fourth function is rejected `)
+
+//   reject("failed ")
+// })
+
+// let total = 0;
+// Promise.all([p1,p2,p3,p4]).then((result)=>{
+//   for(let i in result){
+//     total += result[i];
+//   }
+// console.log(`Result is : ${result}`)
+// }).catch((error)=>{
+//   console.log(`Error : ${error}`)
+// })
+
+
+
+// AjAx is technique used for creating dynamic and fast web pages 
+
+//AJAX A for Asynchronous , j for javascript , And xml 
+
+// xml is data formet 
+
+// in single page website i have many links and each link have own content and when i click on any link i not want to reload whole page only want to change only content on that page only 
+
+// when viewer send request to server and server responce to viewer and provide data that viwer send request when server send data the page refresh and show particular content or file 
+
+// in ajax case request is not go to the server directly 
+
+// we use javascript class xmlHttprequest used go send request background then get data from server and then give responce 
+
+// first go to the background and then get data related to particlar request and then responce the data and in this 
+// don't reload the whole page reload only the content page 
+
+// the content is three type here who get in responce from server 
+
+//text file 
+
+// xml data
+// Extensible Markup Language (XML) is a markup language that provides rules to define any data. Unlike other programming languages, XML cannot perform computing operations by itself. Instead, any programming language or software can be implemented for structured data management.
+
+// json data 
+// JSON stands for JavaScript Object Notation. JSON is a lightweight format for storing and transporting data. JSON is often used when data is sent from a server to a web page. JSON is "self-describing" and easy to understand.
+
+// when we do request to server with xmlhttprequest then these work divided in 5 steps 
+
+// these steps name is ready state 
+
+//0: request not initialize / neutral mood/ no send request to server  
+
+// 1: server connection established  / in this step built connection between local system and server 
+ 
+// 2: request received
+
+// 3: processing request 
+
+// 4: request finish and reponce is ready 
+
+// ready state 2 / means request received to server 
+
+// ready state 4 / means server send responce 
+
+// when server send responce in this case having two things 
+
+// status 
+
+// responceText  / when we have request do for text then reveive responceText 
+
+// in status have three type code 
+
+ // 200 = "ok" / means responce is related to request 
+
+ // 403 = "forbidden" / means server is not responding / having any issue 
+
+ // 404: = "not found " / means not file available in server that we request to the server 
+
+ 
+ 
 
 
 

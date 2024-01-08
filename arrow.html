@@ -5,9 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="arrow.js"></script>
+     
 </head>
 <body>
- 
+    
+    <!-- <p id = "company_name">Is a software company </p>
+
+    <button onclick="updateData">Click me</button>
+
+    <script>
+        function updateData(){
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200 ){
+                    document.getElementById("company_name").innerHTML = this.responseText;
+                    console.log(responseText)
+                }
+            };
+
+            xhttp.open('GET', "content\company_name.txt", true);
+        xhttp.send();
+    }
+        
+    </script> -->
+
+
+
+    <p id="company_name">Is a software company</p>
+
+<button onclick="updateData()">Click me</button>
+
+<script>
+    function updateData() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // console.log("I am working");
+                document.getElementById("company_name").innerHTML = this.responseText;
+            }
+             
+        };
+
+        xhttp.open('GET', 'content/company_name.txt', true);
+        xhttp.send();
+    }
+</script>
+
     
 </body>
 </html>
