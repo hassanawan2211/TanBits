@@ -901,21 +901,456 @@
 
 // find repeated elements of array 
 
-let arr = [2,3,4,2,5,6,3,2,5,7,8,7]; 
+// let arr = [2,3,4,2,5,6,3,2,5,7,8,7]; 
 
-let new_arr = [];
+// let new_arr = [];
 
-// for of 
+// for of   == The for...of statement executes a loop that operates on a sequence of values sourced from an iterable object. Iterable objects include instances of built-ins such as Array, String, TypedArray, Map, Set, NodeList (and other DOM collections), as well as the arguments object, generators produced by generator functions, and user-defined iterables.
 
-let str = "hassan";
+// let str = "hassan";
 
-for(let name in str){
-    console.log(name);
+// for(let name of str){
+//     console.log(name);
+// }
+
+
+// The JavaScript for-in loop is used to cycle through an object's properties. If we want to display the contents of an object during debugging, it can be a fantastic tool.
+// let str = "hassan";
+
+// for(let name in str){
+//   console.log(name);
+// }
+
+
+//  find all repeated element in the an array 
+
+// let arr = [3,5,6,7,3,5,6,7,9,9,33,11,2,22,2,22];
+
+//  let repeated_arr = [];
+
+//  for(let i = 0; i < arr.length; i++){
+//    if(arr.indexOf(arr[i]) !== i && !repeated_arr.includes(arr[i])){
+//     repeated_arr.push(arr[i])
+//    }
+//  }
+
+// console.log(repeated_arr);
+
+
+// another example 
+
+// const numbers = [2, 3, 5, 2, 5, 6, 7,2];
+// const repeatedNumbers = [];
+// for (let i = 0; i < numbers.length; i++) {
+//   let isRepeated = false;
+//   for (let j = i + 1; j < numbers.length; j++) {
+//     if (numbers[i] === numbers[j]) {
+//       isRepeated = true;
+//       break;
+//     }
+//   }
+//   if (isRepeated && !repeatedNumbers.includes(numbers[i])) {
+//     repeatedNumbers.push(numbers[i]);
+//   }
+// }
+// console.log(repeatedNumbers);
+
+
+// sub array 
+
+// const arr = [4,3,5,6];
+
+// let max_sum = arr[0];
+
+// let current_sum = arr[0];
+
+// for(let i = 0; i < arr.length; i++){
+//   current_sum = Math.max(arr[i],
+//     current_sum + arr[i]);
+//     max_sum = Math.max(max_sum,
+//       current_sum );
+// }
+
+
+// console.log(max_sum);  
+
+
+
+//   In an array and we target any two index and return only sum of the target index 
+
+// const array = [3, 5, 2, 8, 4];
+// const target = 1;
+// let sum = 0;
+// for (let i = 0; i < array.length; i++) {
+//   for (let j = i + 1; j < array.length; j++) {
+//     if (array[i] + array[j] === target) {
+//       sum = array[i] + array[j];
+//       break;
+//     }
+//   }
+//   if (sum !== 0) {
+//     break;
+//   }
+// }
+
+// console.log(sum);
+
+// callback function 
+
+// function full_function (arr,sumNumbers){
+
+//   arr.push(10);
+
+   
+// sumNumbers(10,20);
+ 
+
+// }
+
+// sumNumbers((num1,num2) =>{
+//   return num1 +num2;
+// }) 
+
+// arr = [1,2,3,4,5,6];
+//  console.log(full_function(arr,sumNumbers));
+
+
+// function  total_num(num1 , num2){
+//   return num1 + num2;
+// }
+
+//console.log(total_num(25,25));
+
+// cut the array length 
+
+//  let arr = [1,2,4,6,8];
+
+// arr.length = [1];
+
+// console.log(arr);  
+
+// how we empty an array
+
+// let arr = [1,2,3,4,5];
+
+// arr.length  = [];
+
+// console.log(arr)
+
+
+  
+// how would we check an integer
+
+// function checkInterger(num){
+// if(num%1 === 0){
+//   console.log("This is an integer number")
+// } else{
+//   console.log("This is not an integer number ")
+// }
+// }
+// checkInterger( "string");
+
+
+
+ 
+// function isPalindrome (str){
+
+
+//   str = str.toLowerCase();
+  
+//   str = str .replace(/\W/g, "");
+  
+//   let start =0;
+//   let end = str.length -1;
+  
+//   let check = true;
+  
+//   while(start < end){
+//       if(str[start] !== str[end]){
+//           check = false;
+           
+  
+//           if(check === true){
+//             console.log(check);
+//         }  
+  
+//           break;
+//       }
+//       start++;
+//       end--;
+//       break;
+//   }
+
+//   return check;
+  
+//   } 
+
+// // let check = true;
+  
+//    let str =  "race a car";
+
+   
+  
+//   console.log(isPalindrome(str));
+   
+  
+// function isPalindrome(str) {
+//   str = str.toLowerCase();
+//   str = str.replace(/\W/g, "");
+//   let start = 0;
+//   let end = str.length - 1;
+//   let check = true;
+//   while (start < end) {
+//     if (str[start] !== str[end]) {
+//       check = false;
+//       break;
+//     }
+//     start++;
+//     end--;
+//   }
+//   return check;
+// }
+
+// let str = "racecar";
+// console.log(isPalindrome(str)); // expected output: false
+
+// modules 
+
+// JavaScript modules allow you to break up your code into separate files.
+
+// This makes it easier to maintain a code-base.
+
+// Modules are imported from external files with the import statement.
+
+// Modules also rely on type="module" in the <script> tag.
+
+
+// example 
+
+// {/* <script type="module">
+// import message from "./message.js";
+// </script> */}
+
+// Export
+//Modules with functions or variables can be stored in any external file.
+
+//There are two types of exports: Named Exports and Default Exports.
+
+//Named Exports
+//Let us create a file named person.js, and fill it with the things we want to export.
+
+//You can create named exports two ways. In-line individually, or all at once at the bottom.
+
+//In-line individually:
+//person.js
+
+//export const name = "Jesse";
+//export const age = 40;
+//All at once at the bottom:
+//person.js
+
+//const name = "Jesse";
+//const age = 40;
+
+//export {name, age};
+
+//Default Exports
+//Let us create another file, named message.js, and use it for demonstrating default export.
+
+//You can only have one default export in a file.
+
+//Example
+//message.js
+
+//const message = () => {
+//const name = "Jesse";
+//const age = 40;
+//return name + ' is ' + age + 'years old.';
+//};
+
+//export default message;
+//Import
+//You can import modules into a file in two ways, based on if they are named exports or default exports.
+
+//Named exports are constructed using curly braces. Default exports are not.
+
+//Import from named exports
+//Import named exports from the file person.js:
+
+//import { name, age } from "./person.js";
+
+//Import from default exports
+//Import a default export from the file message.js:
+
+//import message from "./message.js";
+
+//Note
+//Modules only work with the HTTP(s) protocol.
+
+//A web-page opened via the file:// protocol cannot use import / export.
+
+
+// promise
+
+// In JavaScript, a promise is a good way to handle asynchronous operations. It is used to find out if the asynchronous operation is successfully completed or not.
+
+//A promise may have one of three states.
+
+//Pending
+//Fulfilled
+//Rejected
+//A promise starts in a pending state. That means the process is not complete. If the operation is successful, the process ends in a fulfilled state. And, if an error occurs, the process ends in a rejected state.
+
+//For example, when you request data from the server by using a promise, it will be in a pending state. When the data arrives successfully, it will be in a fulfilled state. If an error occurs, then it will be in a rejected state.
+
+
+// JavaScript Promise Methods
+//There are various methods available to the Promise object.
+
+// Method	Description
+// all(iterable)	Waits for all promises to be resolved or any one to be rejected
+//  allSettled(iterable)	Waits until all promises are either resolved or rejected
+// any(iterable)	Returns the promise value as soon as any one of the promises is fulfilled
+// race(iterable)	Wait until any of the promises is resolved or rejected
+// reject(reason)	Returns a new Promise object that is rejected for the given reason
+// resolve(value)	Returns a new Promise object that is resolved with the given value
+// catch()	Appends the rejection handler callback
+// then()	Appends the resolved handler callback
+// finally()	Appends a handler to the promise
+
+
+// example 
+
+// let check = false;
+
+// let prom = new Promise (function(resolve,reject){
+//   if(check){
+// resolve("i am successful.")
+//   } else{
+//     reject("i am failed.")
+//   }
+// });
+
+// console.log(prom);
+
+// another method 
+
+// function prom(check){
+//   return new Promise (function(resolve,reject){
+
+//     console.log("fetching data, please wait")
+
+//     setTimeout(() =>{
+//       if(check){
+//         resolve("tanbits is software company")
+//       } else{
+//         reject("tanbits is good company ")
+//       }
+//     },3000)
+
+
+ 
+//   });
+
+// }
+
+// let onfulfilament = (Result) => {
+//   console.log(Result);
+// }
+// let onRejection = (error) => {
+//   console.log(error);
+// }
+
+// prom(false).then(onfulfilament).catch(onRejection);
+  
+// console.log(prom(true))
+
+
+// also do more simple in code 
+
+// function prom(check){
+//   return new Promise (function(resolve,reject){
+
+//     console.log("fetching data, please wait")
+
+//     setTimeout(() =>{
+//       if(check){
+//         resolve("tanbits is software company")
+//       } else{
+//         reject("tanbits is good company ")
+//       }
+//     },3000)
+
+
+ 
+//   });
+
+// }
+
+ 
+
+// prom(true).then((Result) => {
+//   console.log(Result);}).catch((error) => {
+//     console.log(error);});
+
+
+ //    another example division show msg division is done for fulfilled case 
+
+
+//  function prom(num1,num2){
+//   return new Promise (function(resolve,reject){
+
+//     console.log("fetching data, please wait")
+//    var c = num1 / num2;
+//     setTimeout(() =>{
+//       if(num1,num2){
+//         resolve(`your answer is : ${c}`)
+//       } else{
+//         reject(" calculation failed ")
+//       }
+//     },2000)
+
+
+ 
+//   });
+
+// }
+
+ 
+
+// prom(10,3).then((Result) => {
+//   console.log(Result);}).catch((error) => {
+//     console.log(error);});
+  
+
+// example for rejection case 
+
+function prom(num1,num2){
+  return new Promise (function(resolve,reject){
+
+    console.log("fetching data, please wait")
+   var c = num1 / num2;
+    setTimeout(() =>{
+      if(num1,num2){
+        resolve(`your answer is : ${c}`)
+      } else{
+        reject(" calculation failed ")
+      }
+    },2000)
+
+
+ 
+  });
+
 }
 
+ 
 
+prom(10,0).then((Result) => {
+  console.log(Result);}).catch((error) => {
+    console.log(error);});
 
-
+ 
 
 
 

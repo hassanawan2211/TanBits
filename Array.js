@@ -114,13 +114,13 @@
 // // slice method is used for geting value from an array and retrun value in an array 
 
 
-// let y = ["ali", "ahmad", "ahsan", "nadeem", "waseem"];
+let y = ["ali", "ahmad", "ahsan", "nadeem", "waseem"];
 
-// console.log(y);
+console.log(y);
 
-// let z = y.slice(1,4);
+let z = y.slice(1,4);
 
-// console.log(z);
+console.log(z);
 
 // // splice method is used for add any two entry at the middle of the array 
 // // splice method accept 3 parameter index, howmany, new value 
@@ -151,13 +151,13 @@
 // // when we search of an that value not in array then indexof function is return -1 index 
 
 
-let a = ["Ali", "Ahmad", "hassan", "j"]
+// let a = ["Ali", "Ahmad", "hassan", "j"]
 
-console.log(a);
+// console.log(a);
 
-let c = a.indexOf("Ali",2);
+// let c = a.indexOf("Ali",2);
 
-console.log(c);
+// console.log(c);
 
 // // last indexof start searching from end side of an array also give and also give index in parameter for where we want to start 
 
