@@ -11,11 +11,18 @@
     
      
 
-   <!-- ajax method example  -->
+   <!-- ajax method example 
 
-    <p id="company_name">Is a software company</p>
+in Ajax we have use two method for get data from axious 1 is jquery by using this code is simple but we add 100kb file mostly time due to this unnessary load on website and also increase loading time 
 
-<button onclick="updateData()">Click me</button>
+we can also use ajex  with pure javascript by using XMLHttpRequest method but in this method code is two much lengthy 
+
+JSON is the best language for exchanging data due to its characteristics and simplicity. AJAX is a method of web development used to build interactive web applications. Web pages can request data from servers using AJAX without reloading the page. The JSON format is one that the AJAX technique uses to represent data.
+-->
+
+    <!-- <p id="company_name">Is a software company</p>
+
+<button onclick="updateData()">Click me</button> -->
 
 <!-- <script>
     function updateData() {
@@ -38,7 +45,7 @@
 
  <!-- ajax Example for fake json data  -->
 
- <script>
+ <!-- <script>
     function updateData() {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -56,8 +63,118 @@
         xhttp.open('GET', ' https://jsonplaceholder.typicode.com/photos', true);
         xhttp.send();
     }
-</script>
+</script> -->
+
+
+
+
+<!-- Fetch method -->
+
+<!-- JavaScript fetch() method is used to request data from a server. The request can be of any type of API that returns the data in JSON or XML. The fetch() method requires one parameter, the URL to request, and returns a promise.
+
+By using fetch method 
+by this method we can update , insert , delete and read data on server 
+
+Syntax:
+fetch('url')           //api for the get request
+    .then(response => response.json())
+    .then(data => console.log(data));
+Parameters:
+URL: It is the URL to which the request is to be made.
+Options: It is an array of properties. It is an optional parameter.
+Return Value:
+It returns a promise whether it is resolved or not. The return data can be of the format JSON or XML. It can be an array of objects or simply a single object.
+
+Example: This example shows the use of the javascript fetch() method.
+
+NOTE: Without options, Fetch will always act as a get request.
+
+// API for get requests
+let fetchRes = fetch(
+"https://jsonplaceholder.typicode.com/todos/1");
+     
+// FetchRes is the promise to resolve
+// it by using.then() method
+fetchRes.then(res =>
+    res.json()).then(d => {
+        console.log(d)
+    }) -->
+
+    <!-- fetch method Example  -->
+<!-- <script> 
+    fetch("./content/company_name.txt").then((res)=>{
+        return res.text();
+    }).then((data)=>{
+        console.log(data);
+    })
 
     
+
+</script> -->
+
+ <!-- fetch method Example with fake json data   -->
+
+    <!-- <script>
+        fetch("./json/student_data.json").then(res =>  res.json())
+        .then(data => {
+            for(var x in data){
+                var a = `${data[x].name} - ${data[x].company} - ${data[x].city} <br>`
+                document.write( a)
+            }
+        })
+        .catch(Error => console.log("Can't fatch data "));
+    </script> -->
+
+<!-- fetch method using we can update , insert, delete , read data on server 
+first we define method 
+
+// post used for insert data on server 
+
+// get used for read data
+
+// put used for update 
+
+// delete used for delete 
+
+// after methood second property is body 
+
+// In body define those  data that we want to save on server 
+
+-->
+<!-- form for post data -->
+
+<form id="myForm">
+    Title <input type="text" id="titleText" > <br><br>
+    Body  <input type="text" id="bodyText" >  <br><br>
+    User Id  <input type="text" id="userid" >  <br><br>
+    <input type="submit" id="saveForm">
+</form>
+
+<script>
+    document.getElementById("saveForm").addEventListener("click" , function (e)  {
+         
+        e.preventDefault();
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify({
+        title: document.getElementById("titleText").value,
+        body: document.getElementById("bodyText").value,
+        user:  document.getElementById("userid").value,
+    }),
+
+    headers:{
+        'Content-type': 'application/json'
+    },
+
+ } )
+
+ .then((responce) => responce.json())
+ .then((json) => console.log(json));
+    })
+   
+  
+
+</script>
+
 </body>
 </html>
