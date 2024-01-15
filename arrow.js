@@ -1610,17 +1610,438 @@
 // console.log("End");
 // console.log("<br>");
 
+// await is used for stop the execution of code rather then execute other code then run await code 
+// let test =async ()=>{
+//   console.log("1");
+//   console.log("2");
+//  await console.log("3");
+//   console.log("4")
+// }
+// test();
+// console.log("5");
+// console.log("6");
  
 
+// example asyn await 
+
+
+// async function test(){
+//   console.log("2")
+// const responce = await fetch("./json/student_data.json") 
+// console.log("3")
+// const student = await responce.json();
+// console.log("4")
+// return student;
+// } 
+// console.log("1");
+
+// let b = test();
+
+// console.log("5");
+// console.log("6");
+
+// console.log
+
+// 
+
+// async function test(){
+   
+// const responce = await fetch("./json/student_data.json") 
+ 
+// const student = await responce.json();
+ 
+// return student;
+// } 
+ 
+
+//  test().then((res)=>{
+//    console.log(res)
+//  }).catch((error)=>{
+//    console.log(error)
+//  })
+
+
+// symbol is data type of javascript 
+// used for unique value 
+
+// example 
+
+// let a = Symbol("Hello");
+
+// let b = Symbol("Hello")
+
+//  console.log(a === b);
+
+ // for show only value on web page used tostring method 
+
+//  document.write(a.toString())
+  
+ // for inner value only use description method 
+
+//  console.log(b.description)
+
+ // in object how we use symbol
+
+  // let age = Symbol("age");
+
+  // let user = {
+  //   name : "Ali",
+  //   city : "lhr",
+  //   company : "tanbits" ,
+  //   // [age] : 35
+  // };
+
+  // user[age] = 20;
+
+  // console.log(user);
+
+  // in symbol case when we get value of symbol variable then not use .
+
+  // console.log(user[age])
+
+  //for show all key using for in loop 
+
+  // we can't use symbol in for in loop
 
 
 
+// let age = Symbol("age");
 
+//   let user = {
+//     name : "Ali",
+//     city : "lhr",
+//     company : "tanbits" ,
+    
+//   };
+
+//   user[age] = 20;
+//   user["gender"] = "male"
+
+//   for(key in user){
+//     console.log(key)
+//   }
+
+
+
+// Iterators 
+
+
+// In JavaScript an iterator is an object which defines a sequence and potentially a return value upon its termination. Specifically, an iterator is any object which implements the Iterator protocol by having a next() method that returns an object with two properties: value. The next value in the iteration sequence. done
 
  
+
+// Example 
+
+// let numbers = [100,200,300];
+
+// let iterat = numbers[Symbol.iterator]();
+
+// iterat.next();
+
+ 
+// console.log(iterat.next());
+// console.log(iterat.next());
+// console.log(iterat.next());
+// console.log(iterat.next());
+
+
+// call back function 
+
+// function f_name (){
+//   console.log("Hello hassan")
+// };
+
+// function full_name(show_name,total){
+   
+//   let a = 10;
+//     let b = 20;
+//     let c = a + b;
+//     console.log(c);
+  
+//     show_name(); 
+//     total();
+// }
+
+// function sum(){
+
+//   console.log("sum function is  ")
+// }
+
+// full_name(f_name, sum)
+
+
+// example with set-time-out 
+
+// when we add callback function in any function as a parameter then we call the callback function in settimeout then the callback funtion is wait till the set-time-out function is not run 
+
+// function f1(){
+//   console.log("this is first function")
+// };
+
+// function main_f(last_f){
+
+//   setTimeout(()=>{
+//     console.log("tanbits run after 2 seconds")
+
+//     last_f();
+//   }, 2000)
+
+  
+// }
+
+// function f2(){
+//   console.log("this is last function ")
+// }
+
+// f1();
+
+// main_f(f2);
+
+
+// pyramid of doom” or “callback hell
+
+// Callback functions are an effective way to ensure delayed execution of a function until another one completes and returns with data. However, due to the nested nature of callbacks, code can end up getting messy if you have a lot of consecutive asynchronous requests that rely on each other. This was a big frustration for JavaScript developers early on, and as a result code containing nested callbacks is often called the “pyramid of doom” or “callback hell.”
+
+// example 
+
+// function callback_hell(){
+//   setTimeout(()=>{
+//     console.log("this is first function ")
+//     setTimeout(()=>{
+//       console.log("this is second function")
+//       setTimeout(()=>{
+//         console.log("this is thired function ")
+//       },1000)
+//     },3000)
+//   },2000)
+// }
+
+
+//  callback_hell();
+
+
+// map method logic behind 
+
+//  function map(arr,new_map){
+//   let result = [];
+
+//   for(let i=0; i<arr.length; i++){
+
+//     let new_arr = new_map(arr[i],i,arr);
+
+//     result.push(new_arr);
+//   }
+//   return result;
+//  }
+
+//  let array = [1,2,3,4,5];
+
+//  let new_array = map(array , (ar)=> ar*2);
+
+//  console.log(new_array);
+
+//  console.log(array);
+
+
+// try & catch 
+
+// A try / catch block is basically used to handle errors in JavaScript. You use this when you don't want an error in your script to break your code.
+
+// While this might look like something you can easily do with an if statement, try/catch gives you a lot of benefits beyond what an if/else statement can do, some of which you will see below.
+
+// try{
+// //...
+// }catch(e){
+// //...
+// }
+// A try statement lets you test a block of code for errors.
+
+// A catch statement lets you handle that error. For example:
+
+// try{ 
+// getData() // getData is not defined 
+// }catch(e){
+// alert(e)
+// }
+// This is basically how a try/catch is constructed. You put your code in the try block, and immediately if there is an error, JavaScript gives the catch statement control and it just does whatever you say. In this case, it alerts you to the error.
+
+
+// example 
+
+// when single line error occure in try block then catch block show the error msg 
+
+// try{
+//  a ;
+//  b = 20;
+// let c = a + b;
+
+// console.log(c)
+// }
+// catch{
+//        console.log ("error occure some thing is wrong ")
+// }
+
+// another example 
+
+// try{
+// function total_num(){
+//   setTimeout(function sum(){
+//     let a = 10;
+//     let b = 20;
+//     let c = a + b;
+//     console.log(c)
+//   },1000)
+// }
+// }catch(err){
+// console.log(err)
+// }
+
+
+// by using try & catch we can test the code and also check the that  line of code where error occure 
+
+// example 
+
+//  try{
+//   let ;
+// if(b > 12){
+//   console.log(" b is less then ")
+// }else{
+//   console.log("b is greater ")
+// }
+//  }
+//  catch(error){
+// console.log(error.name);
+// console.log(error.message);
+// console.log(error.stack);
+//  }
+
+// typs of error in javascript
+
+// The following are the 7 types of errors in JavaScript:
+
+// 1)Syntax error - The error occurs when you use a predefined syntax incorrectly.
+// const func = () =>
+// console.log(hello)
+// }
+
+
+// In the above example, an opening bracket is missing in the code, which invokes the Syntax error constructor.
+
+// 2)Reference Error - In a case where a variable reference can't be found or hasn't been declared, then a Reference error occurs.
+// console.log(x);
+
+// Output:
+
+// console.log(x);
+//             ^
+// ReferenceError: x is not defined
+
+
+// 3)Type Error - An error occurs when a value is used outside the scope of its data type.
+// let num = 15;
+// console.log(num.split("")); //converts a number to an array
+
+// Output:
+
+// console.log(num.split("")); //converts a number to an array
+//                 ^
+// TypeError: num.split is not a function
+
+
+// 4)Evaluation Error - Current JavaScript engines and EcmaScript specifications do not throw this error. However, it is still available for backward compatibility. The error is called when the eval() backward function is used, as shown in the following code block:
+// try{
+//   throw new EvalError("'Throws an error'")
+// }catch(error){
+//   console.log(error.name, error.message)
+// }
+
+// Output:
+
+// EvalError 'Throws an error'
+
+
+// 5)RangeError - There is an error when a range of expected values is required, as shown below:
+// const checkRange = (num)=>{
+//   if (num < 30) throw new RangeError("Wrong number");
+//   return true
+// }
+
+// checkRange(20);
+
+// Output:
+
+//  if (num < 30) throw new RangeError("Wrong number");
+//                 ^
+// RangeError: Wrong number
      
+
+// 6)URI Error - When the wrong character(s) are used in a URI function, the error is called.
+// console.log(decodeURI("https://www.educative.io/shoteditor"))
+
+// console.log(decodeURI("%sdfk"));
+
+// Output:
+
+// console.log(decodeURI("%sdfk"));
+//             ^
+// URIError: URI malformed
+
+
+// 7)Internal Error - In the JS engine, this error occurs most often when there is too much data and the stack exceeds its critical size. When there are too many recursion patterns, switch cases, etc., the JS engine gets overwhelmed.
+// switch(condition) {
+//  case 1:
+//  ...
+//  break
+//  case 2:
+//  ...
+//  break
+//  case 3:
+//  ...
+//  break
+//  case 4:
+//  ...
+//  break
+//  case 5:
+//  ...
+//  break
+//  case 6:
+//  ...
+//  break
+//  case 7:
+//  ...
+//  break
+//  ... up to 500 cases
+//  }
+
+// Output: Its output will be like InternalError.
+
+
  
 
+// json have two method 
 
+// json.parse
+// json.parse used for convert json data into javascript object when we convert server data then used this method 
 
-     
+// json.stringyfy
+//json.stringyfy used for convert javascript object into json  when we send data to server then we used json.stringyfy to convert into json 
+ 
+
+// mostly used try& catch when we get data from server in json form 
+// another try& catch example 
+
+try{
+   let json = '{  "Age" : 23}'
+
+let user = JSON.parse(json)
+
+if(!user.name){
+  throw new Error("incomple syntax error ")
+}
+
+console.log(user.name);
+console.log(user.Age);
+} 
+catch(err){
+console.log(err);
+}
