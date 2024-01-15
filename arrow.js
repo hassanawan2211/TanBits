@@ -2030,18 +2030,72 @@
 // mostly used try& catch when we get data from server in json form 
 // another try& catch example 
 
-try{
-   let json = '{  "Age" : 23}'
+// try{
+//    let json = '{  "Age" : 23}'
 
-let user = JSON.parse(json)
+// let user = JSON.parse(json)
 
-if(!user.name){
-  throw new Error("incomple syntax error ")
-}
+// if(!user.name){
+//   throw new Error("incomple syntax error ")
+// }
 
-console.log(user.name);
-console.log(user.Age);
-} 
-catch(err){
-console.log(err);
-}
+// console.log(user.name);
+// console.log(user.Age);
+// } 
+// catch(err){
+// console.log(err);
+// }
+
+// callback function
+// function Total_sum(number , total){
+//   console.log(number);
+
+//   total();
+// }
+
+// function sum(){
+//   let a = 10;
+//   let b = 20;
+//   let c = a + b;
+//   console.log(c)
+// }
+
+// Total_sum(23,sum);
+
+
+// call back hell
+
+// function getData(dataId){
+//   setTimeout(()=>{
+//     console.log("data",dataId)
+//   },3000)
+   
+// }
+
+// getData(1);
+// getData(2);
+// getData(3);
+// getData(4);
+
+
+
+function getData(dataId,getNextData){
+    setTimeout(()=>{
+      console.log("data",dataId)
+      if(getNextData){
+        getNextData()
+      }
+    },3000)
+     
+  }
+  
+  getData(1,()=>{
+    console.log("getting data 2...")
+    getData(2,()=>{
+      console.log("getting data 3...")
+      getData(3,()=>{
+        console.log("getting data 4...")
+        getData(4)
+      });
+    });
+  });
