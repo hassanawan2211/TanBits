@@ -2077,25 +2077,196 @@
 // getData(3);
 // getData(4);
 
-
-
-function getData(dataId,getNextData){
-    setTimeout(()=>{
-      console.log("data",dataId)
-      if(getNextData){
-        getNextData()
-      }
-    },3000)
+// callback hel nested function used inside the functions this is nested callback hell 
+// This style of programming becomes difficultto understand & manage 
+// function getData(dataId,getNextData){
+//     setTimeout(()=>{
+//       console.log("data",dataId)
+//       if(getNextData){
+//         getNextData()
+//       }
+//     },3000)
      
-  }
+//   }
   
-  getData(1,()=>{
-    console.log("getting data 2...")
-    getData(2,()=>{
-      console.log("getting data 3...")
-      getData(3,()=>{
-        console.log("getting data 4...")
-        getData(4)
-      });
-    });
-  });
+//   getData(1,()=>{
+//     console.log("getting data 2...")
+//     getData(2,()=>{
+//       console.log("getting data 3...")
+//       getData(3,()=>{
+//         console.log("getting data 4...")
+//         getData(4)
+//       });
+//     });
+//   });
+
+// callback hell is problem in javascript 
+
+// promise is used to solve this problem of callback hell in javascript 
+
+// promise 
+
+// function getData(dataId, getNextData){
+//   return new Promise((resove,reject)=>{
+//     setTimeout(()=>{
+//       console.log("data :" ,dataId)
+//       resove("success");
+//       if(getNextData){
+//         getNextData
+//       }
+//     },2000)
+//   })
+
+// }
+// getData(123);
+
+
+// another example of promise 
+
+// function asynFun(){
+//   return new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//       console.log("data1")
+//       resolve("success")
+//     }, 5000)
+//   })
+// }
+// console.log("fetching data1.....")
+// let p1 = asynFun();
+// p1.then((res)=>{
+//   console.log(res,"responce is resolve:")
+// }).catch((error)=>{
+//   console.log(error,"some thing went wrong with the api")
+// })
+
+// promise chain example 
+
+// function asynFun1(){
+//   return new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//       console.log("data1")
+//       resolve("success")
+//     }, 5000)
+//   })
+// }
+
+
+// function asynFun2(){
+//   return new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//       console.log("data2")
+//       resolve("success")
+//     }, 5000)
+//   })
+// }
+
+
+// console.log("fetching data1.....")
+//  asynFun1().then((res)=>{
+//   console.log("fetching data2.....")
+//    asynFun2().then((res)=>{
+//     console.log(res,"responce is resolve:")
+//   }).catch((error)=>{
+//     console.log(error,"some thing went wrong with the api")
+//   })
+// }).catch((error)=>{
+//   console.log(error,"some thing went wrong with the api")
+// })
+
+
+// another example promise chaining 
+
+// function getData(dataId){
+//   return new Promise((resove,reject)=>{
+//     setTimeout(()=>{
+//       console.log("data :" ,dataId)
+//       resove("success");
+//     },2000)
+//   })
+
+// }
+// console.log("getting data1.....")
+// getData(1).then((res)=>{
+//   console.log("getting data2.....")
+//   return getData(2);
+// }).then((res)=>{
+//   console.log("getting data3.....")
+//   return getData(3);
+// }).then((res)=>{
+//   console.log("final result.....")
+//   console.log(res)
+// })
+
+// Asyn & awit is the javascript keywords . and used for asynchoronous behaviour in javascript . this method do more simple asynchronous as compare to promise and call back function 
+
+// asyn await always return a promise 
+
+// in any function we use aysn keyword then function called asyn function 
+
+// await keyword always used inside the aysnc function 
+
+// example 
+
+// function api(){
+//   return new Promise((resolve,reject)=>{
+// setTimeout(()=>{
+//   console.log("student data");
+//   resolve(200);
+// }, 3000)
+//   })
+// }
+
+// error occure in this case beacuse await keyword only used in inside the async function 
+
+// await api();
+
+
+
+// another example 
+
+// function api(){
+//   return new Promise((resolve,reject)=>{
+// setTimeout(()=>{
+//   console.log("student data");
+//   resolve(200);
+// }, 3000)
+//   })
+// }
+
+// async function getStudentData(){
+// await api();
+// await api();
+// }
+
+// getStudentData();
+
+
+
+function getData(dataId){
+  return new Promise((resove,reject)=>{
+    setTimeout(()=>{
+      console.log("data :" ,dataId)
+      resove("success");
+    },2000)
+  })
+}
+
+
+// async function getAllData(){
+//   await getData(1);
+//   await getData(2);
+//   await getData(3);
+// }
+
+// getAllData();
+
+// IIFE 
+// iife is a function that is called immediately as soon as it is defined.
+
+// syntax(function)();
+
+(async function(){
+    await getData(1);
+    await getData(2);
+    await getData(3);
+  })();
