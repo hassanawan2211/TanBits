@@ -2242,14 +2242,14 @@
 
 
 
-function getData(dataId){
-  return new Promise((resove,reject)=>{
-    setTimeout(()=>{
-      console.log("data :" ,dataId)
-      resove("success");
-    },2000)
-  })
-}
+// function getData(dataId){
+//   return new Promise((resove,reject)=>{
+//     setTimeout(()=>{
+//       console.log("data :" ,dataId)
+//       resove("success");
+//     },2000)
+//   })
+// }
 
 
 // async function getAllData(){
@@ -2265,8 +2265,52 @@ function getData(dataId){
 
 // syntax(function)();
 
-(async function(){
-    await getData(1);
-    await getData(2);
-    await getData(3);
-  })();
+// (async function(){
+//     await getData(1);
+//     await getData(2);
+//     await getData(3);
+//   })();
+
+
+// promises example 
+
+// let promise1 = new Promise((resolve,reject)=>{
+// setTimeout(()=>{
+//        console.log("promise one resolve ")
+//        resolve({username: "ali hassan", company: "tanbits", })
+// },2000)
+// })
+
+// promise1.then((result)=>{
+//   console.log(result)
+//   return result.company
+// })
+// .then((res)=>{
+//   console.log(res);
+// })
+
+
+let promise2 = new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+   let error = false;
+   if(!error){
+    resolve({username: "ali hassan", company: "tanbits", })
+   }else{
+    reject("something went wrong")
+   }
+  },5000)
+})
+
+promise2.then((result)=>{ 
+  console.log(result)
+  return result.username
+})
+.then((username)=>{
+  console.log(username)
+})
+.catch((error)=>{
+  console.log(error)
+})
+.finally(()=>{
+  console.log("The promise is either resolve or rejected ")
+})
