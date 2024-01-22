@@ -2234,10 +2234,14 @@
 // }
 
 // async function getStudentData(){
-// await api();
+//  try {
+//   await api();
 // await api();
 // }
-
+//   catch (error) {
+//   error
+//  }
+// }
 // getStudentData();
 
 
@@ -2290,27 +2294,364 @@
 // })
 
 
-let promise2 = new Promise((resolve,reject)=>{
-  setTimeout(()=>{
-   let error = false;
-   if(!error){
-    resolve({username: "ali hassan", company: "tanbits", })
-   }else{
-    reject("something went wrong")
-   }
-  },5000)
-})
+// let promise2 = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//    let error = false;
+//    if(!error){
+//     resolve({username: "ali hassan", company: "tanbits", })
+//    }else{
+//     reject("something went wrong")
+//    }
+//   },5000)
+// })
 
-promise2.then((result)=>{ 
-  console.log(result)
-  return result.username
-})
-.then((username)=>{
-  console.log(username)
-})
-.catch((error)=>{
-  console.log(error)
-})
-.finally(()=>{
-  console.log("The promise is either resolve or rejected ")
-})
+// promise2.then((result)=>{ 
+//   console.log(result)
+//   return result.username
+// })
+// .then((username)=>{
+//   console.log(username)
+// })
+// .catch((error)=>{
+//   console.log(error)
+// })
+// .finally(()=>{
+//   console.log("The promise is either resolve or rejected ")
+// })
+
+
+// let promise1 = new Promise((resolve,reject)=>{
+// setTimeout(()=>{
+//   let error = false;
+//   if(!error){
+//     resolve({name: "Ali Hassan", company: "tanbits", city: "Lahore"})
+//   }else{
+//     reject("error: some thing went worng")
+//   }
+// },4000)
+// })
+
+// async function consumer(){
+//    try{
+//     let responce = await promise1;
+//   console.log(responce)
+//    }
+//    catch(error){
+// console.log(error)
+//    }
+// }
+// consumer();
+
+
+// async function getAllUserData(){
+//    try {
+//     const res = await fetch('https://jsonplaceholder.typicode.com/users')
+
+//   const data =  await res.json()
+//    setTimeout(()=>{
+//     console.log(data)
+//    },5000)
+//    } catch (error) {
+//     console.log(error)
+//    }
+// }
+
+
+//   getAllUserData();
+
+
+
+// let promise2 = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     let error = false;
+//     if(!error){
+//       resolve({name: "Ali hassan", company: "tanbits", city: "lhr"})
+//     }else{
+//       reject("ERROR: something went wrong ")
+//     }
+//   })
+// })
+
+
+// fetch('https://jsonplaceholder.typicode.com/users')
+// .then((res)=>{
+//   return res.json();
+// })
+// .then((result)=>{
+   
+//   return result.username
+
+// })
+// .then((username)=>{
+// console.log(username)
+// })
+// .catch((error)=>{
+//   console.log(error)
+// })
+
+
+// promise all function 
+
+// when we have multiple promise when(thenfunction) only call in this condition if all promise resolve 
+  
+// if any promise reject then catch function is call in promise.all case 
+
+// example 
+
+// let p1 = new Promise((resolve)=>{
+//   setTimeout(()=>{
+//     let sqlData = {id:1, name:"Ali Hassan", city:"lahore"}
+//     resolve(sqlData);
+//   },1000)
+// })
+
+// let p2 = new Promise((resolve)=>{
+//    setTimeout(()=>{
+//     let user = {id:2, name: "hfhf", city: "lhr"}
+//     resolve(user)
+//    },2000)
+// })
+
+// let p3 = new Promise((resolve)=>{
+//   setTimeout(()=>{
+//     let apiData = {company: "tanbits", city: "lahore"}
+//     resolve(apiData)
+//   },5000)
+// })
+
+//   Promise.all([p1,p2,p3])
+// .then((res)=>{
+//   console.log(res)
+// })
+// .catch((error)=>{
+//   console.log(error , "promise is rejected ")
+// })
+
+
+// factorial example 
+
+// let num = 4;
+
+// let fac = 1;
+
+// for(num; num >= 1; num--){
+//   console.log(num)
+//   fac = fac * num
+// }
+
+
+// console.log(fac);
+
+
+// swap two variable value with third variable 
+
+// let a = 10; 
+
+// let b = 20;
+
+// let c = a;
+
+// a = b;
+
+// b = c;
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+// swap two variables value without third variable 
+
+// let a = 10;
+// let b = 25;
+
+
+// a = a + b;
+// b = a - b;
+// a = a - b;
+
+
+// console.log(a);
+// console.log(b);
+
+
+// swap there varable value 
+
+// let a = 5;
+// let b = 10;
+// let c = 15;
+
+// a = a + b + c ;   // 30
+
+// b = a - (b + c) // 5
+
+// c = a - (b + c) // 10
+
+// a = a - (b + c ) / 15
+
+
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+
+// 
+
+// let num = -10;
+
+// if(num < 0){
+ 
+//   return -1;
+  
+// }else if(num == 0){
+//   return 1
+// }else{
+//   let fac = 1;
+//   for(num ; num > 1; num--){
+//     // console.log(num)
+//     fac = fac * num
+   
+//   }
+//   console.log(fac);
+// }
+
+   
+// if(num ===-1){
+//   console.log("enter positive value ")
+
+
+// }
+
+// console.log(num);
+
+
+// triangle  pattern example 
+
+// let n = 5;
+// let pattern = "";
+
+// for(let i=1; i<= n; i++){
+//   let row = "";
+
+// for(let j = 1; j<= i; j++){
+// row += "*";
+// pattern = row + "\n";
+// // console.log(pattern);
+// }
+// console.log(pattern);
+// } 
+
+
+
+// let p1 = new Promise ((resolve, reject)=>{
+// setTimeout(()=>{
+//   let error = true;
+//   resolve("tanbits is software company ")
+// })
+// })
+
+// async function getResponce(){
+//   await p1;
+// }
+
+// let p1 = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     console.log("student data1 ")
+//     resolve({name: "ali hassan", company : "tanbits"})
+//   })
+// })
+
+// let p2 = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     console.log("student data2 ")
+//     reject( {name: "dtyigy", company : "tkxel"})
+//   })
+// })
+
+// let p3 = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     console.log("student data3 ")
+//     resolve({name: "ali", company : "10pearls"})
+//   })
+// })
+
+// Promise.race([p1,p2,p3]).then((responce)=>{
+//   console.log(responce)
+// })
+// .catch((error)=>{
+// console.log(error , "some thing error in the code ")           
+// })
+
+
+// let user = {
+//   name:"ali hassan",
+//   company : "tanbits",
+//   city : "lahore",
+  
+
+// };
+
+// let user2 = {...user};
+
+// user2.city = "gujrat"
+
+// console.log(user2);
+
+// console.log(user);
+
+
+// let obj1 = {
+//   name : "ali",
+//   company : "tanbits",
+//   city: "lahore",
+  
+//   services: {
+//     tech: "mern",
+//     leptop: "dell"
+//   }
+   
+// }
+
+// let obj2 = JSON.parse(JSON.stringify(obj1)); 
+
+// obj2.services.leptop = "mac"
+
+// console.log(obj1)
+// console.log(obj2)
+
+// for of loop javascript
+
+// let string = "hassan";
+
+// let size = 0;
+
+// for (let i of string){
+//   console.log(" i is  " ,i)
+//   size++;
+
+// }
+// console.log("size of string is " , size)
+
+
+// for in loop return keys of object 
+
+// example 
+
+// let user = {
+//   name: "ali",
+//   company : "tanbits",
+//   city : "lahore"
+// }
+
+// for ( let i in user){
+//   console.log(i);
+// }
+
+ // practice question 
+
+ for(let num = 0; num <= 100; num++){
+  
+  if (num%2 !==0){
+    console.log("these are even numbers ", num )
+  }
+ }
