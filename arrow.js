@@ -1745,7 +1745,7 @@
 // console.log(iterat.next());
 
 
-// call back function 
+// call back function hel
 
 // function f_name (){
 //   console.log("Hello hassan")
@@ -2649,9 +2649,342 @@
 
  // practice question 
 
- for(let num = 0; num <= 100; num++){
+//  for(let num = 0; num <= 100; num++){
   
-  if (num%2 !==0){
-    console.log("these are even numbers ", num )
-  }
- }
+//   if (num%2 !==0){
+//     console.log("these are even numbers ", num )
+//   }
+//  }
+
+// call back hel 
+
+// function callBackHel(){
+//   setTimeout(()=>{
+//     console.log("this is first function ")
+//     setTimeout(()=>{
+//       console.log("this is second function")
+//       setTimeout(()=>{
+//         console.log("this is third function ")
+//         setTimeout(()=>{
+//           console.log("this is fifth function ")
+//         },500)
+//       },1000)
+//     },1500)
+//   },2000)
+// }
+
+// callBackHel();
+
+
+
+
+// higher order function 
+
+// aysa function jo accept krly aik aur function ya retrun krdy aik or function os function ko khaty hn higher order function 
+
+// function abcd (val){
+
+// }
+
+// abcd(function(){
+
+// });
+
+// a function return another function called higher order function 
+
+// function abcd (){
+//   return function (){}
+// };
+
+// for example 
+
+// foreach is a function (inside also we define another function )  this is foreach 
+
+// let array = [1,2,3,4,5];
+
+// array.forEach((val)=>{
+
+// console.log(val)
+// });
+
+// constructor function 
+// a function which whenever invoked with new keyword returns an object , if we use this keyword inside that function , it return an object with all of the properties and method mentioned inside that function with tis keyword such function is called constructor function 
+
+ // normal function jis ma hum this keyword ka use kryn and ap function ko call krty waqat new key word ka use kryn 
+
+//  function studentData (firstName,lastName){
+
+// let students = {
+//   firstName : firstName,
+//   lastName : lastName,
+//   getFullName: function(){
+//     console.log(`${this.firstName} ${this.lastName}`)
+//   }
+// }
+// return students
+
+//  }
+
+//  let student1 = studentData("ali","hassan")
+//  console.log(student1);
+//  student1.getFullName();
+
+//  let student2 = studentData("hassan","asghar")
+//  console.log(student2);
+//  student2.getFullName();
+
+//  example of this constructor function 
+
+// function studentData(firstName,lastName){
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.getFullName = function(){
+//     console.log(`${this.firstName} ${this.lastName}`)
+//   }
+// }
+
+// let student1 = new studentData("hassan","awan");
+// console.log(student1);
+// student1.getFullName();
+
+// another example of the constructor function 
+
+// function sanchaOfBiscuit(){
+//   this.width = 12;
+//   this.height = 22;
+//   this.color = "brown";
+//   this.taste = "sugary"
+// }
+
+// var bis1 = new sanchaOfBiscuit();
+// console.log(bis1);
+// var bis2 = new sanchaOfBiscuit();
+// console.log(bis2);
+// var bis3 = new sanchaOfBiscuit();
+// console.log(bis3);
+
+// we constructor jb apky pass aisa koi b scanerio ho ky apko ek jasii properties waly bohat sary element bana ny hn oss waqat ap constructor function use krsalhty ho 
+
+// for example
+
+// function circleButton(color){
+// this.radius = 2;
+// this.color = color;
+// this.icon = false;
+// this.pressable = true;
+// }
+
+// let button1 = new circleButton("blue");
+// console.log(button1);
+// let button2 = new circleButton("red");
+// console.log(button2);
+
+// first class function 
+
+// ayse function jo ky aik normal values ya vairable ki trah treat kiye ja saky 
+
+// iife = > immediately invoked function expression 
+// by using iife we make private variable 
+
+// let ans = (function(){
+//   let privateNo = 12;
+
+//   return {
+//     getter: function(){
+//     console.log(privateNo);
+//     },
+//     setter:function(val){
+// privateNo = val;
+//     }
+//   }
+  
+// })();
+
+//  console.log(ans);
+//  ans.getter();
+
+//  ans.setter(11);
+
+//  ans.getter()
+
+// prototype 
+// javascript object have a specialist property called prototype that is either null or refrences another object. what does it mean ? 
+// in javascript object there is a prototype property
+
+// Every object in JavaScript has a built-in property, which is called its prototype. The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype
+
+// let obj1 = {
+//   user: "ali hassan",
+//   city: "hassan" 
+
+// }
+
+// console.log(obj1);
+
+// prototype inheritance 
+
+// let human = {
+//   canFly: false,
+//   canWalk: true,
+//   canTalk: true,
+//   haveEmotional: true,
+//   hasFourLegs: false
+// }
+
+// let tanbitsEmployess = {
+//   canMakerAmazingWebsite:  true,
+//   goodDesigner: true,
+
+// }
+
+// tanbitsEmployess also have all properties of human then tanbitsEmployess inherits properties from human
+
+// tanbitsEmployess.__proto__ = human
+
+// console.log(tanbitsEmployess);
+
+
+
+// globalscope 
+
+// jb b koi cheez {} ky ander nhi hoti ossy hm globalscope khaty hn 
+
+// this keyword 
+
+// in any method this keyword always refers to parent object 
+
+// the value of this in global scope is window
+
+// the value of this in fuction is window 
+
+// in method the value of this is object 
+
+// let obj = {
+//   name: "hassan",
+//   talk: function(){
+//     console.log(this)
+//   }
+// }
+
+// console.log(obj)
+
+
+// function abcd (){
+//   console.log(this)
+// }
+// abcd();
+
+// method 
+
+// ak function jo object ky ander ho ossy hm method  khaty hn 
+
+
+// call apply bind 
+
+//jb b apny koi function chalana ha jis ma this ki value koi or ha pr ap chahty ho ky this ki value koi or object rahy then we used . apply .call and . bind method  
+
+// akr apky pass koi function ha and koi  object ha tu tumy function chalana ha us  pr or by default jo this ki value 
+// window na rakh kr point krwana ha kisi object ki traf 
+
+// for example 
+
+//  function abcd (){
+// console.log(this.age);
+
+//  }
+
+//  let obj = {
+//   name: "ali",
+//   age: 23
+//  }
+
+//  abcd.call(obj);
+
+// another method 
+
+// function abcd (a,b,c){
+//   console.log(this, a,b,c);
+  
+//    }
+  
+//    let obj = {
+//     name: "ali",
+//     age: 23
+//    }
+  
+//    abcd.call(obj,2,3,5);
+
+// apply method 
+
+// function abcd(a,b,c,d){
+// console.log(this, a,b,c,d)
+// }
+
+// let obj ={
+//   name: "ali",
+//   age: 23
+// }
+
+// abcd.apply(obj,[5,12,14,45]);
+
+// bind 
+// mostley used in react js like eventlistner 
+
+// function abcd(){
+//   console.log(this)
+// }
+
+// let obj = {
+//   name: "ali",
+//   city: "lahore"
+// }
+
+// // abcd.bind(obj)
+
+// let binderFun = abcd.bind(obj)
+// console.log(binderFun);
+// binderFun();
+
+
+// pure function 
+
+// pure function is any function which has these two feature 
+
+// 1) it should always return same output for same input 
+//2) it will never change/update the value of a global varable 
+
+
+// this is not pure function 
+// function sum (val){
+//   return Math.random()*val;
+// }
+
+// var ans1 = console.log(sum(3));
+// var ans2 = console.log(sum(3));
+
+// example of pure function 
+
+// function sum(a,b){
+// return a*b;
+// }
+
+// var ans1 = console.log(sum(1,2))
+// var ans2 = console.log(sum(1,2))
+ 
+
+// impure function example 
+// var f = 22;
+// function sum(a,b){
+
+//   f = 25;
+//   return a*b;
+//   }
+  
+//   var ans1 = console.log(sum(1,2))
+//   var ans2 = console.log(sum(1,2))
+   
+
+ 
+
+
+
