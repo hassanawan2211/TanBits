@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./datastructure.js"></script>
+</head>
+<body>
+    <!-- get value from input field using js  -->
+    <!-- <input type="text" id="element">
+    <button onclick="getData()">Get Element</button> -->
+
+
+    <!-- insert an element in an array with js  -->
+
+    <input type="text" id="pos" placeholder="Enter position of Element">
+    <input type="text" id="newEle" placeholder="Enter new Element">
+    <button onclick="insertData()">Insert New Element</button>
+
+    <script>
+
+        // assess elements from array by unsing javascript 
+
+        // let array = [1,4,3,2,5,6]
+       
+        // function getData(){
+        //     let el= document.getElementById("element").value
+        //     console.log(array[el]);
+        // }
+
+
+    //     let array = [1,4,3,2,5,6]
+       
+    //    function getData(){
+    //     let el= document.getElementById("element").value
+    //        if(el<array.length && typeof parseInt(el)==="number"){
+    //        console.log(array[el]);
+    //        }else{
+    //         alert("plz Enter vailid input ")
+    //        }
+    //    }
+
+// insert an element in an array 
+
+// let data = [1,2,3,4,6];
+// let new_el = 5;
+// let position = 4;
+// for(let i=data.length -1; i>=0; i--){
+//     console.log(data[i])
+//     if(i>=position){
+//         data[i + 1] = data[i];
+//         if(i == position){
+//             data[i] = new_el
+//         }
+//     }
+// }
+// console.log(data);
+
+// function insertData(){
+//     let data = [1,2,3,4,6];
+//     let new_el = document.getElementById('newEle').value;
+//     new_el = parseInt(new_el)
+// let position = document.getElementById('pos').value;
+// for(let i=data.length -1; i>=0; i--){
+//     // console.log(data[i])
+//     if(i>=position){
+//         data[i + 1] = data[i];
+//         if(i == position){
+//             data[i] = new_el
+//         }
+//     }
+// }
+// console.log(data);
+// }
+
+// delete an element of an array
+
+let data = [3,5,1,2,3];
+
+let position = 2;
+for(let i=2; i < data.length-1;i++){
+    data[i]=data[i+1]
+ 
+}
+data.length = data.length-1
+console.log(data)
+    </script>
+</body>
+</html>
