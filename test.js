@@ -215,12 +215,27 @@
 
 
 
-let str = "ali"
-let new_str = "";
-for(let i = 0; i < str.length; i++){
-    new_str += str[i] + str[i];
-}
+// let str = "ali"
+// let new_str = "";
+// for(let i = 0; i < str.length; i++){
+//     new_str += str[i] + str[i];
+// }
 
-console.log(new_str);
+// console.log(new_str);
+
+
+
+
+function generation(x, y) {
+    if (x === 0) {
+      return "me!";
+    } else if (x < 0) {
+      return y === "m" ? "great grandfather" : "great grandmother";
+    } else {
+      return y === "m" ? (x === 1 ? "son" : (x === 2 ? "grandson" : "descendant")) : (x === 1 ? "daughter" : (x === 2 ? "granddaughter" : "descendant"));
+    }
+  }
+
+  console.log(generation(2,"m"));
 
   
