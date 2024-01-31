@@ -1,5 +1,4 @@
-// Stack
-
+// Stackdata structure
 // A Stack is a container of objects that are inserted and removed according to the last-in first-out (LIFO) principle. In the pushdown stacks only two operations are allowed: push the item into the stack, and pop the item out of the stack.
 // There are basically three operations that can be performed on stacks. They are:
 // inserting an item into a stack (push).
@@ -88,17 +87,71 @@
 
 // descending order 
 
-let  stack = [1,4,8,9,2,3,4,1,2,4];
-let temp;
+// let  stack = [1,4,8,9,2,3,4,1,2,4];
+// let temp;
 
-for (let i = 0; i < stack.length; i++) {
-    for (let j = i + 1; j < stack.length; j++) {
-        if (stack[i] < stack[j]) {
-            temp = stack[i];
-            stack[i] = stack[j];
-            stack[j] = temp;
-        }
+// for (let i = 0; i < stack.length; i++) {
+//     for (let j = i + 1; j < stack.length; j++) {
+//         if (stack[i] < stack[j]) {
+//             temp = stack[i];
+//             stack[i] = stack[j];
+//             stack[j] = temp;
+//         }
+//     }
+// }
+
+// console.log(stack);
+
+
+// stack problems 
+
+// we define a Stack constructor function that creates a new stack object.
+// the push method adds an element to the top of the stack
+// the pop method removes and returns the top element
+// the peek method returns the top element without removing 
+// the isEmpty method checks if the stack is empty.
+
+const stack = [];
+let topp = -1;
+
+function push(value) {
+    topp++;
+    stack[topp] = value;
+};
+
+function pop() {
+    if (topp === -1) {
+        return "Underflow";
     }
+    const value = stack[topp];
+    topp--;
+    return value;
 }
 
+function peek() {
+    if (topp === -1) {
+        return "Underflow";
+    }
+    return stack[topp];
+}
+
+function isEmpty() {
+    return topp === -1;
+}
+
+push(3);
+push(4);
+push(5);
+push(6);
+// push(9);
+// push(9);
+// push(9);
+push(9);
+console.log(pop());
+console.log(pop());
+console.log(peek());
+console.log(isEmpty());
 console.log(stack);
+
+
+
