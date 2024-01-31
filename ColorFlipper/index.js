@@ -1,4 +1,4 @@
-const colorArray = ["blue", "green", "gray", "pink", "red", "orange", "black", "white"];
+const colorArray = ["red", "green", "gray", "black", "blue", "orange", "pink", "white"];
 
 const btn = document.getElementById("btn");
 
