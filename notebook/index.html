@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Note App</title>
+    <link rel="stylesheet" href="./note.css">
+</head>
+<body>
+
+      <h1>Notebook</h1>
+      <form>
+        <input type="text" id="note" name="note" placeholder="Enter your note here...">
+        <input type="button" value="Add" onclick="addNote()">
+        <input type="button" value="Update" onclick="updateNote()">
+        <input type="button" value="Delete" onclick="deleteNote()">
+        <input type="submit" value="Submit" onclick="submitNotes()">
+      </form>
+      <div class="notebook">
+        <h2>Notes</h2>
+        <ul id="notes">
+        </ul>
+      </div>
+      
+     
+      
+    <script src="./note.js"></script> 
+</body>
+</html>
