@@ -52,7 +52,7 @@ textarea::placeholder{
 }
 
 button{
-    background: green;
+    background: black;
     color: white;
     font-size: 20px;
     padding: 10px 30px;
@@ -60,5 +60,29 @@ button{
     border: 0px;
     outline: 0px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+button img{
+    width: 25px;
+    margin-right: 10px;
+}
+
+select{
+    flex: 1;
+    color: white;
+    background: rgba(230, 27, 27, 0.877);
+    height: 50px;
+    padding: 0 20px;
+    outline: 0px;
+    border: 0px;
+    border-radius: 40px;
+    appearance: none;
+    background-image: url(./dropdown\ icon.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position-x: calc(100% - 20px);
+    background-position-y: 20px;
 }
 
