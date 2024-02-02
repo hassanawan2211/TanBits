@@ -1,0 +1,64 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.container h1{
+    font-size: 50px;
+    font-weight: 500px;
+    margin-top: -50px;
+    margin-bottom: 50px;
+
+}
+
+textarea{
+    width: 650px;
+    height: 300px;
+    background: white;
+    color: black;
+    font-size: 20px;
+    border-radius: 10px;
+    resize: none;
+    margin-top: 30px;
+    padding: 1rem;
+
+}
+
+textarea::placeholder{
+    font-size: 20px;
+    color: black;
+    
+} 
+
+.row{
+    width: 550px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 15px;
+}
+
+button{
+    background: green;
+    color: white;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 40px;
+    border: 0px;
+    outline: 0px;
+    cursor: pointer;
+}
+
