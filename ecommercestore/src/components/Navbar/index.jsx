@@ -12,7 +12,7 @@ const Navbar = () => {
       <nav className="flex justify-between items-center w-[1286px] h-[41px] mx-20">
         <div className="flex items-center">
           <img src={logo} alt="Furniro Logo" className="w-12 h-8 mr-2" />
-          <span className="text-2xl font-bold">Furniro</span>
+          <span className="text-2xl font-bold font-montserrat">Furniro</span>
         </div>
         <ul className="flex space-x-14">
           <li><a href="#" className="text-base font-medium">Home</a></li>

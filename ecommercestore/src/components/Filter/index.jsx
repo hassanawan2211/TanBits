@@ -49,7 +49,7 @@ const Filter = ({ handleSort, handleShowItems }) => {
             />
           </div>
           <div className="flex justify-between items-center w-[230px]">
-            <h5>Sort by</h5>
+            <h5 className="ml-10">Sort by</h5>
             <select
               value={sortBy}
               onChange={handleChange}

@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Filter from "./components/Filter";
 import Products from "./pages/Products";
 import Footer from "./components/Footer";
+import Services from "./components/Services";
 
 function App() {
   const [sortBy, setSortBy] = useState("");
@@ -27,6 +28,7 @@ function App() {
       <Header />
       <Filter handleSort={handleSort} handleShowItems={handleShowItems} />
       <Products sortBy={sortBy} showItems={showItems} />
+      <Services/>
       <Footer />
     </>
   );
