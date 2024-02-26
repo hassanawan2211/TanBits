@@ -2,11 +2,36 @@ import React from "react";
 
 const Card = (props) => {
   return (
-    <div className="bg-white border border-gray-300 p-5 rounded-lg shadow-md w-64 mb-8">
-      <img className="w-full h-48 object-contain" src={props.img} alt="" />
-      <h5 className="text-lg font-semibold mt-4">{props.title}</h5>
-      <p className="text-gray-600 mt-2">Price: {props.price}$</p>
-    </div>
+    <>
+    
+      <div className="bg-white text-black w-[285px] h-[446px] shadow-lg rounded-md overflow-hidden">
+        <img
+          className="w-[285px] h-[301px] object-contain"
+          src={props.img}
+          alt="cloth images"
+        />
+        <div className="p-5 flex flex-col gap-3">
+          <div className="flex items-center gap-3">
+            <span className="px-3 py-1 rounded-full text-xs bg-gray-100">
+              stokc ready
+            </span>
+            <span className="px-3 py-1 rounded-full text-xs bg-gray-100">
+              official store
+            </span>
+          </div>
+
+          <h2 className="font-semibold text-xl overflow-ellipsis overflow-hidden whitespace-nowrap">
+            {props.title}
+          </h2>
+
+           <div>
+           <span className="font-bold text-xl">Price: {props.price}$</span>
+           </div>
+
+        </div>
+      </div>
+      
+    </>
   );
 };
 

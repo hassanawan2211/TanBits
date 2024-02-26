@@ -5,7 +5,7 @@ const Footer = () => {
     <div className='flex justify-around h-[400px] mt-[45px]' style={{ backgroundColor: "rgba(255, 255, 255, 1)" }}>
       <div>
         <h1 className='leading-10 font-bold text-2xl'>Funiro.</h1>
-        <p className='leading-10 text-base font-normal'>400 University Drive Suite 200 Coral Gables,
+        <p className='leading-10 text-base font-medium'>400 University Drive Suite 200 Coral Gables,
 FL 33134 USA</p>
       </div>
       <div className='flex'>

@@ -7,7 +7,7 @@ import support_icon from "../../assest/customer-support.svg"
 const Services = () => {
   return (
     <>
-      <div className='h-[200px] flex items-center justify-around'
+      <div className='h-[200px] flex items-center justify-around md:'
       style={{ backgroundColor: "rgba(249, 241, 231, 1)" }}>
         <div className='flex'>
         <img src={trophy_icon} alt="trophy icon" className='w-[50px] h-[50px]'/>

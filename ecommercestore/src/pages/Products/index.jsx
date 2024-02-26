@@ -1,52 +1,27 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import Card from "../../components/Card";
 
-const Products = ({ sortBy, showItems }) => { 
-  const [items, setItems] = useState([]);
-  const [totalItems, setTotalItems] = useState(0); 
+const Products = ({ products, sortBy, sortOrder, searchQuery, showPerPage }) => {
+  const sortedProducts = [...products].sort((a, b) => {
+    if (sortBy === "price") {
+      return sortOrder === "asc" ? a.price - b.price : b.price - a.price;
+    } else if (sortBy === "alphabetically") {
+      return sortOrder === "asc" ? a.title.localeCompare(b.title) : b.title.localeCompare(a.title);
+    }
+    return 0;
+  });
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await axios.get("https://fakestoreapi.com/products");
-        const data = response.data;
-        setItems(data);
-        setTotalItems(data.length); 
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    
-    getData();
-  }, []);
+  const filteredProducts = sortedProducts.filter((item) =>
+    item.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
-  useEffect(() => {
-    const sortItems = () => {
-      if (sortBy === "price") {
-        setItems(prevItems =>
-          [...prevItems].sort((a, b) => a.price - b.price)
-        );
-      } else if (sortBy === "title") {
-        setItems(prevItems =>
-          [...prevItems].sort((a, b) => a.title.localeCompare(b.title))
-        );
-      }
-    };
-
-    sortItems();
-  }, [sortBy]);
+  const paginatedProducts = filteredProducts.slice(0, showPerPage);
 
   return (
     <div>
-      <div className="flex justify-center flex-wrap p-10">
-        {items.slice(0, showItems).map((item, index) => ( 
-          <Card
-            img={item.image}
-            title={item.title}
-            price={item.price}
-            key={index}
-          />
+      <div className="bg-white flex flex-wrap justify-center gap-10 mt-16 mb-16">
+        {paginatedProducts.map((item, index) => (
+          <Card img={item.image} title={item.title} price={item.price} key={index} />
         ))}
       </div>
     </div>
