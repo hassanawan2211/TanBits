@@ -1,0 +1,36 @@
+
+body, h1, p {
+    margin: 0;
+    padding:0 ;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.typewriter-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    text-align: center;
+    color:white;
+    white-space: pre-wrap;  
+    letter-spacing: .15em;  
+}
+ 
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+
+ 
+.cursor {
+    display: inline-block;
+    border-right: .15em solid orange;
+    margin-left: 2px;
+    animation: blink-caret .75s step-end infinite;
+}

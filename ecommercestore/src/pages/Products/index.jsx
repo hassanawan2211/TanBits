@@ -19,7 +19,7 @@ const Products = ({ products, sortBy, sortOrder, searchQuery, showPerPage }) => 
 
   return (
     <div>
-      <div className="bg-white flex flex-wrap justify-center gap-10 mt-16 mb-16">
+      <div className="bg-white flex flex-wrap justify-center gap-6 mt-16 mb-16">
         {paginatedProducts.map((item, index) => (
           <Card img={item.image} title={item.title} price={item.price} key={index} />
         ))}
