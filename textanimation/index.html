@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typewriter Text Animation</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        font-weight: 500;
+        font-size: medium;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 20px 40%;
+      }
+      .typewriter-text {
+        color: yellow;
+        overflow: hidden;  
+        white-space: pre-line;  
+        text-align: center;  
+        margin: 0 auto;  
+        letter-spacing: 0.15em; 
+        animation: typing 3.5s steps(40, end),
+          blink-caret 0.75s step-end infinite;
+      }
+      
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+       
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: orange;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="typewriter-text" id="typewriter"></div>
+
+    <script>
+     
+      const paragraph = ` 
+  // Define the array
+  const array = [2, 3, 6, 8, 9, 3, 5, 6, 7, 8];
+// Initialize max_num with the first element of the array
+let max_num = array[0];
+// Iterate through the array starting from the second element
+for (let i = 1; i < array.length; i++) {  
+    // Compare each element with max_num
+    if (array[i] > max_num) {
+        // If the current element is greater than max_num, update max_num
+        max_num = array[i];
+    }
+}
+// Print the maximum number
+console.log("Maximum number:", max_num);
+  `;
+      let index = 0;
+
+      function typeWriter() {
+        if (index < paragraph.length) {
+          let char = paragraph.charAt(index);
+          if (char === "Y" || char === "y") {
+            document.getElementById("typewriter").innerHTML +=
+              '<span style="color: green;">' + char + "</span>";
+          } else if (char === "N" || char === "n") {
+            document.getElementById("typewriter").innerHTML +=
+              '<span style="color: red;">' + char + "</span>";
+          } else {
+            document.getElementById("typewriter").innerHTML += char;
+          }
+          index++;
+          setTimeout(typeWriter, 90);  
+        }
+      }
+
+      
+      window.onload = function () {
+        typeWriter();
+        speak(paragraph);
+      };
+
+      
+      function speak(text) {
+        const synth = window.speechSynthesis;
+        const utterance = new SpeechSynthesisUtterance(text);
+        synth.speak(utterance);
+      }
+    </script>
+  </body>
+</html>
