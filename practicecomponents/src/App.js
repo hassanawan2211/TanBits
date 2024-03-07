@@ -7,17 +7,15 @@ import Login from './Loginpage';
 import { Provider } from 'react-redux';
 import store from './reduxContainer/Store';
 import BookContainer from './reduxContainer/BookContainer';
+import Track from "./components/Livetrack" 
+import ProductPage from './SingleProductPage';
 
 function App() {
   return (
-    <>
-    <Provider store={store}> 
-     {/* <Filter/> */}
-     {/* <Singlrproductpage/> */}
-     {/* <Navbar/> */}
-     {/* <Login/> */}
-     <BookContainer/>
-     </Provider>
+    <> 
+    <Navbar/>
+    <Track/>
+     <ProductPage/>
     </>
   );
 }
