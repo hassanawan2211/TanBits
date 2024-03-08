@@ -9,13 +9,17 @@ import store from './reduxContainer/Store';
 import BookContainer from './reduxContainer/BookContainer';
 import Track from "./components/Livetrack" 
 import ProductPage from './SingleProductPage';
+import CustomerReview from './components/Review';
 
 function App() {
+
+
   return (
     <> 
-    <Navbar/>
-    <Track/>
-     <ProductPage/>
+     <Navbar/> 
+     <Track/>
+     <ProductPage/> 
+     <CustomerReview/>
     </>
   );
 }
