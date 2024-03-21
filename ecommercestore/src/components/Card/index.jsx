@@ -6,7 +6,7 @@ const Card = (props) => {
     
       <div className="bg-[#F4F5F7] text-black w-[285px] h-[446px] shadow-lg rounded-md overflow-hidden">
         <img
-          className="w-[285px] h-[301px] object-contain bg-white"
+          className="w-[285px] h-[301px] object-contain bg-white p-5"
           src={props.img}
           alt="cloth images"
         />

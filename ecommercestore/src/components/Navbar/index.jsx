@@ -21,10 +21,10 @@ const Navbar = () => {
           <li><a href="#" className="text-base font-medium">Contact</a></li>
         </ul>
         <div className="flex items-center space-x-10 max-lg:space-x-5 max-md:hidden">
-          <img src={account} alt="Icon 1" className="w-7 h-7" />
-          <img src={search} alt="Icon 2" className="w-7 h-7" />
-          <img src={hearticon} alt="Icon 3" className="w-7 h-7" />
-          <img src={addcart} alt="Icon 4" className="w-7 h-7" />
+          <img src={account} alt="Icon 1" className="w-[23px] h-[18px]"/>
+          <img src={search} alt="Icon 2" className="w-[22px] h-[22px]"/>
+          <img src={hearticon} alt="Icon 3" className="w-[23px] h-[20px]" />
+          <img src={addcart} alt="Icon 4" className="w-[24px] h-[22px]" />
         </div>
       </nav>
     </div>

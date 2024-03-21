@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import Filter from "./components/Filter";
-import Products from "./pages/Products";
 import Footer from "./components/Footer";
-import Services from "./components/Services";
 import axios from "axios";
-import { BrowserRouter as Router } from "react-router-dom";
+import { useState, useEffect } from "react";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Shop from "./pages/Shop/Shop";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -44,24 +42,31 @@ function App() {
 
   return (
     <>
-      <Navbar/>
-      <Header/>
-      <Filter
-        onSortChange={handleSortChange}
-        onSearch={handleSearch}
-        onShowChange={handleShowChange} 
-        totalItemsCount={products.length}
-        showPerPage={showPerPage}
-      />
-      <Products
-        products={products}
-        sortBy={sortBy}
-        sortOrder={sortOrder}
-        searchQuery={searchQuery}
-        showPerPage={showPerPage}
-      />
-      <Services />
+    <Router>
+      <Navbar />
+
+      <Routes>
+        <Route
+          path="/shop"
+          element={
+            <Shop
+              onSortChange={handleSortChange}
+              onSearch={handleSearch}
+              onShowChange={handleShowChange}
+              totalItemsCount={products.length}
+              showPerPage={showPerPage}
+              products={products}
+              sortBy={sortBy}
+              sortOrder={sortOrder}
+              searchQuery={searchQuery}
+            />
+          }
+        />
+        <Route path="/product/:productId" element={<ProductDetail />} />
+      </Routes>
+
       <Footer />
+      </Router>
     </>
   );
 }
