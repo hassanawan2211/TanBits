@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-import Filter from './components/Filter';
-import Singlrproductpage from './SingleProductPage';
-import Navbar from './components/Navbar';
-import Login from './Loginpage';
-import { Provider } from 'react-redux';
-import store from './reduxContainer/Store';
-import BookContainer from './reduxContainer/BookContainer';
-import Track from "./components/Livetrack" 
-import ProductPage from './SingleProductPage';
-import CustomerReview from './components/Review';
+import navIteam from './components/hamburger';
+import Navbar from "../src/components/Navbar"
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Cart from './pages/Cart';
 
 function App() {
 
 
   return (
     <> 
-     <Navbar/> 
-     <Track/>
-     <ProductPage/> 
-     <CustomerReview/>
+     <BrowserRouter>
+     <Navbar/>
+     <Routes>
+      <Route path='/' element ={<Home/>}></Route>
+      <Route path='/cart' element ={<Cart/>}></Route>
+     </Routes>
+     </BrowserRouter>
     </>
   );
 }
